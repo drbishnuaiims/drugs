@@ -1,0 +1,2172 @@
+{
+  "schemaVersion": "2.1",
+  "lastUpdated": "2026-09-15",
+  "source": "Psychopharm Reference Database",
+  "drugs": [
+    {
+      "id": "sertraline",
+      "identity": {
+        "genericName": "Sertraline",
+        "brandNames": [
+          "Zoloft",
+          "Zosert",
+          "Sertral",
+          "SEtral"
+        ],
+        "class": "Selective serotonin reuptake inhibitor (SSRI)",
+        "category": "Antidepressant",
+        "nbn": {
+          "domain": "Serotonergic",
+          "mechanism": "Selective serotonin transporter (SERT) inhibition"
+        },
+        "genericAvailable": true,
+        "habitForming": false
+      },
+      "regulatoryIndications": [
+        "Major depressive disorder / major depressive episodes",
+        "Prevention of recurrence of major depressive episodes",
+        "Obsessive-compulsive disorder (OCD)",
+        "Panic disorder, with or without agoraphobia",
+        "Post-traumatic stress disorder (PTSD)",
+        "Social anxiety disorder",
+        "Premenstrual dysphoric disorder (PMDD) — included in the U.S. prescribing information; regulatory indications vary by jurisdiction"
+      ],
+      "commonUses": [
+        "Major depressive disorder",
+        "Obsessive-compulsive disorder",
+        "Panic disorder",
+        "Social anxiety disorder",
+        "Post-traumatic stress disorder",
+        "Premenstrual dysphoric disorder",
+        "Other anxiety-spectrum presentations where an SSRI is clinically indicated — jurisdictional/off-label status should be checked"
+      ],
+      "warnings": [
+        "Monitor for clinical worsening, suicidality and unusual behavioural changes, particularly during initiation and dose changes and in younger patients.",
+        "Screen for bipolar disorder/mania before starting an antidepressant.",
+        "Serotonin syndrome can occur, especially with other serotonergic medicines or MAO inhibitors.",
+        "Bleeding risk may increase with NSAIDs, aspirin, anticoagulants and other drugs affecting platelet function.",
+        "Hyponatraemia/SIADH can occur; risk is higher in older adults and patients taking diuretics or who are volume depleted.",
+        "QTc prolongation and torsade de pointes have been reported, particularly with additional QT-risk factors or interacting medicines.",
+        "Seizures may occur; use caution in epilepsy and avoid in unstable epilepsy.",
+        "Abrupt discontinuation can cause withdrawal/discontinuation symptoms."
+      ],
+      "mechanism": {
+        "clinical": "Sertraline selectively inhibits the serotonin transporter (SERT), reducing neuronal serotonin reuptake and increasing serotonergic neurotransmission. It has much weaker effects on norepinephrine and dopamine reuptake.",
+        "inDepth": {
+          "receptors": [
+            "The product information describes no clinically meaningful affinity for muscarinic cholinergic, dopaminergic, adrenergic, histaminergic, GABA or benzodiazepine receptors at therapeutic exposure."
+          ],
+          "transporters": [
+            "SERT: potent and selective inhibition of neuronal serotonin uptake.",
+            "NET and DAT: only very weak effects on norepinephrine and dopamine neuronal reuptake according to product information."
+          ],
+          "affinity": [
+            "The clinical pharmacology profile is dominated by SERT inhibition rather than direct receptor agonism or antagonism."
+          ],
+          "potency": [
+            "Clinical dosing is generally 25–200 mg once daily depending on indication, tolerability and response."
+          ],
+          "structureActivity": "Sertraline is the active S-enantiomer of a tetralin-derived SSRI structure. Its clinical pharmacology is characterized by high selectivity for SERT relative to other monoamine transporters and receptors."
+        }
+      },
+      "evidence": [
+        {
+          "indication": "Major depressive disorder",
+          "trialDose": "50–200 mg/day",
+          "onset": "Some therapeutic effect may be seen within about 7 days, but several weeks are usually required to assess response.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo in controlled clinical trials",
+          "effectSize": "Not entered as a single pooled effect size; see cited guideline/trial evidence.",
+          "summary": "Sertraline is an established SSRI treatment for major depressive disorder. In a continuation study, patients who responded during an 8-week open-treatment phase were randomized to sertraline or placebo for 44 weeks; relapse was lower with sertraline."
+        },
+        {
+          "indication": "Obsessive-compulsive disorder",
+          "trialDose": "50–200 mg/day",
+          "onset": "Response generally requires longer assessment than the first week; NICE recommends reassessing after an adequate SSRI trial and considering dose increase when appropriate.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo in controlled trials",
+          "effectSize": "Not entered as a single pooled effect size.",
+          "summary": "Sertraline is an established SSRI option for OCD. Pediatric controlled data show greater improvement than placebo on clinician- and symptom-scale outcomes, and NICE recommends sertraline among first-line SSRIs for adult OCD."
+        },
+        {
+          "indication": "Panic disorder",
+          "trialDose": "25 mg/day initially, then 50 mg/day; may increase in 50 mg steps to 200 mg/day",
+          "onset": "Assess over several weeks; the 25 mg starting dose is used to reduce early treatment-emergent adverse effects.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo in controlled trials",
+          "effectSize": "Not entered as a single pooled effect size.",
+          "summary": "Sertraline is an established SSRI treatment for panic disorder, with a lower starting dose commonly used before titration."
+        },
+        {
+          "indication": "Post-traumatic stress disorder",
+          "trialDose": "25 mg/day initially, then 50 mg/day; may increase to 200 mg/day",
+          "onset": "Several weeks; do not judge efficacy from the first few days alone.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo in controlled trials",
+          "effectSize": "Not entered as a single pooled effect size.",
+          "summary": "Sertraline is an established SSRI treatment for PTSD. Product information reports positive placebo-controlled trials, with response rates varying by population."
+        },
+        {
+          "indication": "Social anxiety disorder",
+          "trialDose": "25 mg/day initially, then 50 mg/day; may increase to 200 mg/day",
+          "onset": "Several weeks; gradual titration may improve early tolerability.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo in controlled trials",
+          "effectSize": "Not entered as a single pooled effect size.",
+          "summary": "Sertraline is an established SSRI treatment for social anxiety disorder."
+        },
+        {
+          "indication": "Premenstrual dysphoric disorder",
+          "trialDose": "Use the current jurisdiction-specific prescribing information; continuous or luteal-phase regimens may be used depending on the product indication and clinical plan.",
+          "onset": "Often assessed over menstrual-cycle symptom patterns rather than by daily symptom change alone.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo in clinical trials",
+          "effectSize": "Not entered as a single pooled effect size.",
+          "summary": "Sertraline has a U.S. regulatory indication for PMDD. Confirm local regulatory status and regimen before prescribing."
+        }
+      ],
+      "dosing": {
+        "indications": [
+          {
+            "indication": "Major depressive disorder",
+            "startingDose": "50 mg once daily",
+            "targetDose": "50–200 mg once daily according to response and tolerability",
+            "maximumDose": "200 mg/day",
+            "titration": "Increase in 50 mg steps at intervals of at least 1 week."
+          },
+          {
+            "indication": "Obsessive-compulsive disorder",
+            "startingDose": "50 mg once daily in adults; pediatric dosing differs",
+            "targetDose": "50–200 mg once daily",
+            "maximumDose": "200 mg/day",
+            "titration": "Increase by 50 mg at intervals of at least 1 week as clinically indicated."
+          },
+          {
+            "indication": "Panic disorder",
+            "startingDose": "25 mg once daily",
+            "targetDose": "50–200 mg once daily",
+            "maximumDose": "200 mg/day",
+            "titration": "Increase to 50 mg/day after 1 week; thereafter increase by 50 mg steps no more often than weekly."
+          },
+          {
+            "indication": "PTSD",
+            "startingDose": "25 mg once daily",
+            "targetDose": "50–200 mg once daily",
+            "maximumDose": "200 mg/day",
+            "titration": "Increase to 50 mg/day after 1 week; subsequent increases by 50 mg no more often than weekly."
+          },
+          {
+            "indication": "Social anxiety disorder",
+            "startingDose": "25 mg once daily",
+            "targetDose": "50–200 mg once daily",
+            "maximumDose": "200 mg/day",
+            "titration": "Increase to 50 mg/day after 1 week; subsequent increases by 50 mg no more often than weekly."
+          },
+          {
+            "indication": "OCD in children/adolescents 6–17 years",
+            "startingDose": "6–12 years: 25 mg/day; 13–17 years: 50 mg/day",
+            "targetDose": "Individualized; may increase in 50 mg steps",
+            "maximumDose": "200 mg/day",
+            "titration": "Dose changes should not occur more often than once weekly; consider lower body weight in children."
+          }
+        ],
+        "dosageForms": [
+          "Immediate-release oral tablets: 25 mg, 50 mg and 100 mg strengths are available in current product information; local formulations vary."
+        ],
+        "administrationTips": [
+          "Administer once daily, either morning or evening.",
+          "May be taken with or without food.",
+          "For panic disorder, PTSD and social anxiety disorder, a 25 mg starting dose followed by 50 mg after 1 week may improve early tolerability.",
+          "Allow at least 1 week between dose changes."
+        ],
+        "renalAdjustment": "No dosage adjustment is generally necessary in renal impairment according to product information.",
+        "hepaticAdjustment": "Use cautiously in hepatic impairment. A lower dose or less frequent dosing should be considered; avoid in severe hepatic impairment where product information states that clinical data are insufficient."
+      },
+      "trajectory": {
+        "ifWorks": {
+          "responseDefinition": "Assess clinically meaningful symptom improvement and functional recovery rather than relying on early tolerability alone.",
+          "remissionGoal": "Aim for remission where clinically achievable, with recovery of function and reduction of residual symptoms.",
+          "continuationDuration": "For major depression, NICE recommends antidepressant treatment for at least 6 months including after remission, with regular review; individual relapse risk may require longer treatment.",
+          "maintenance": "Use the lowest effective dose and review the ongoing need periodically. For recurrent/severe illness, longer-term relapse-prevention treatment may be appropriate."
+        },
+        "ifFails": {
+          "nonResponseDefinition": "Before declaring non-response, confirm diagnosis, adherence, adequate dose/duration, tolerability, comorbidity, substance use and psychosocial factors.",
+          "assessmentTime": "For depression, benefits should generally become apparent within about 4 weeks; OCD often requires a longer adequate trial. NICE advises reassessment and dose/strategy review when response is limited.",
+          "escalation": "If tolerated and within the licensed range, consider dose optimization; higher doses can increase adverse effects and are not always more effective.",
+          "switchingTriggers": "Consider switching when there is inadequate response despite an adequate trial, unacceptable adverse effects, clinically important activation, or a treatment-specific contraindication. Switching involving MAOIs requires specialist washout planning."
+        },
+        "augmentation": [
+          "For depression with limited response, NICE recommends shared decision-making around dose optimization, switching antidepressants, adding psychological treatment and other evidence-based strategies rather than automatic pharmacological augmentation.",
+          "Specific augmentation should be selected according to diagnosis, prior treatment response, adverse-effect burden and specialist guidance."
+        ]
+      },
+      "safety": {
+        "criticalWarnings": [
+          "Suicidal thoughts and behaviours: monitor closely, especially during early treatment and after dose changes; antidepressant-associated suicidal behaviour risk is particularly relevant in patients younger than 25 years.",
+          "Serotonin syndrome/NMS: risk increases with MAOIs and other serotonergic medicines, including some opioids, triptans and stimulants.",
+          "Severe bleeding: risk increases with NSAIDs, aspirin, anticoagulants and other platelet-active medicines.",
+          "Hyponatraemia/SIADH: particularly important in older adults, diuretic users and volume-depleted patients.",
+          "Mania/hypomania: assess for bipolar disorder and discontinue/reassess if a manic phase emerges.",
+          "QTc prolongation/TdP: consider patient-specific and medication-specific QT risk."
+        ],
+        "common": [
+          "Nausea",
+          "Diarrhoea",
+          "Dry mouth",
+          "Headache",
+          "Dizziness",
+          "Somnolence",
+          "Insomnia",
+          "Fatigue",
+          "Tremor",
+          "Hyperhidrosis",
+          "Sexual dysfunction / ejaculation failure",
+          "Decreased libido"
+        ],
+        "uncommon": [
+          "Agitation or akathisia",
+          "Vomiting",
+          "Constipation",
+          "Abdominal pain or dyspepsia",
+          "Palpitations or tachycardia",
+          "Abnormal bleeding",
+          "Hyponatraemia",
+          "Sexual dysfunction in women",
+          "Weight change",
+          "Convulsion",
+          "QTc prolongation"
+        ],
+        "rare": [
+          "Serotonin syndrome",
+          "Neuroleptic malignant syndrome-like reaction",
+          "Severe cutaneous adverse reactions including Stevens-Johnson syndrome/toxic epidermal necrolysis",
+          "Severe hepatic injury",
+          "Torsade de pointes",
+          "Pancreatitis",
+          "Rhabdomyolysis",
+          "Severe hypersensitivity/angioedema"
+        ],
+        "lifeThreatening": [
+          "Serotonin syndrome",
+          "Severe hyponatraemia with seizures/coma",
+          "Major haemorrhage",
+          "Severe hypersensitivity/anaphylactoid reaction",
+          "Torsade de pointes/QT-related ventricular arrhythmia",
+          "Severe cutaneous adverse reaction",
+          "Severe overdose toxicity"
+        ],
+        "quickProfile": {
+          "weightGain": "Low-to-moderate; weight increase is reported, but major metabolic weight gain is less characteristic than with several antipsychotics.",
+          "sedation": "Usually low; somnolence can occur.",
+          "sexualDysfunction": "Clinically important SSRI adverse effect; dose-dependent sexual dysfunction is reported.",
+          "qtRisk": "Low at therapeutic exposure but QTc prolongation/TdP have been reported; risk increases with additional QT-risk factors.",
+          "metabolicRisk": "Generally low relative to metabolically active antipsychotics; monitor clinically relevant weight/metabolic changes."
+        },
+        "management": [
+          "Nausea/diarrhoea: often improve with continued treatment; consider slower titration or dose adjustment if troublesome.",
+          "Sexual dysfunction: assess temporal relationship and severity; consider dose optimization, switching or evidence-based adjunctive strategies where appropriate.",
+          "Activation/akathisia: assess timing and severity; avoid reflexively increasing the dose if marked restlessness develops.",
+          "Hyponatraemia: check serum sodium when clinically indicated, particularly in high-risk patients; discontinue/reassess if symptomatic hyponatraemia occurs.",
+          "Bleeding: reassess concomitant NSAIDs/anticoagulants/antiplatelet drugs and investigate clinically significant bleeding.",
+          "Serotonin syndrome: stop serotonergic contributors and provide urgent supportive management when suspected."
+        ]
+      },
+      "pharmacokinetics": {
+        "halfLife": "Approximately 26 hours (reported range about 22–36 hours).",
+        "steadyState": "Approximately 1 week with once-daily dosing; about two-fold accumulation occurs to steady state.",
+        "bioavailability": "Food does not significantly change tablet bioavailability; absolute oral bioavailability is not established as a simple percentage in the cited SmPC.",
+        "proteinBinding": "Approximately 98% bound to plasma proteins.",
+        "metabolism": "Extensive first-pass hepatic metabolism; multiple pathways including CYP3A4, CYP2C19 and CYP2B6. Major metabolite is N-desmethylsertraline.",
+        "elimination": "Sertraline and metabolite are extensively metabolized and metabolites are excreted in urine and faeces in approximately equal amounts; less than 0.2% of unchanged sertraline is excreted in urine."
+      },
+      "interactions": [
+        {
+          "drug": "Irreversible MAOIs / methylene blue / other MAOI activity",
+          "effect": "Potentially life-threatening serotonin syndrome or NMS-like toxicity.",
+          "management": "Contraindicated. Do not start sertraline until at least 14 days after an irreversible MAOI; allow at least 7 days after stopping sertraline before starting an irreversible MAOI, according to the cited SmPC."
+        },
+        {
+          "drug": "Pimozide",
+          "effect": "Increased pimozide exposure with potentially serious cardiac risk.",
+          "management": "Contraindicated."
+        },
+        {
+          "drug": "Other serotonergic medicines (other antidepressants, triptans, amphetamines, serotonergic opioids, St John's wort)",
+          "effect": "Increased risk of serotonin toxicity.",
+          "management": "Avoid or use only with strong clinical justification and monitoring."
+        },
+        {
+          "drug": "NSAIDs, aspirin, anticoagulants and other platelet-active drugs",
+          "effect": "Increased bleeding risk.",
+          "management": "Use caution; assess individual bleeding risk and monitor clinically."
+        },
+        {
+          "drug": "Warfarin",
+          "effect": "May increase prothrombin time/alter INR.",
+          "management": "Monitor INR/prothrombin time when sertraline is initiated or stopped."
+        },
+        {
+          "drug": "Lithium",
+          "effect": "Pharmacodynamic interaction may increase tremor and serotonergic adverse effects.",
+          "management": "Monitor clinically when combined."
+        },
+        {
+          "drug": "Phenytoin",
+          "effect": "Phenytoin may reduce sertraline concentrations; case reports also suggest possible increased phenytoin exposure in some patients.",
+          "management": "Monitor clinical response and phenytoin concentrations when appropriate."
+        },
+        {
+          "drug": "CYP2D6 substrates with narrow therapeutic index (e.g. flecainide, propafenone, some TCAs)",
+          "effect": "Sertraline can act as a mild-to-moderate CYP2D6 inhibitor and may increase substrate exposure.",
+          "management": "Use caution, particularly at higher sertraline doses; monitor where clinically indicated."
+        },
+        {
+          "drug": "QT-prolonging medicines",
+          "effect": "Potential additive QTc prolongation/ventricular arrhythmia risk.",
+          "management": "Assess cumulative QT risk, electrolytes and patient-specific risk factors."
+        },
+        {
+          "drug": "CYP3A4 inducers/inhibitors",
+          "effect": "Strong inducers may lower sertraline exposure; potent inhibitors may increase exposure.",
+          "management": "Review the complete medication list and monitor clinical response/adverse effects."
+        },
+        {
+          "drug": "Grapefruit juice",
+          "effect": "Large amounts may increase sertraline plasma exposure.",
+          "management": "The cited SmPC advises avoiding grapefruit juice."
+        }
+      ],
+      "specialPopulations": {
+        "elderly": {
+          "recommendation": "Can be used when clinically indicated, but dose carefully and monitor tolerability.",
+          "doseAdjustment": "No routine age-based dose reduction is specified, but use the lowest effective dose and titrate cautiously.",
+          "monitoring": "Particular attention to hyponatraemia, falls, bleeding, adverse effects and polypharmacy."
+        },
+        "childrenAdolescents": {
+          "recommendation": "Regulatory/product information supports use for OCD from age 6 years; pediatric major depressive disorder efficacy is not established in the cited SmPC.",
+          "doseAdjustment": "OCD: 6–12 years start 25 mg/day; 13–17 years start 50 mg/day; maximum 200 mg/day with weekly-or-longer titration intervals.",
+          "monitoring": "Monitor closely for suicidality, agitation, hostility/behavioural activation and growth/development during long-term treatment."
+        },
+        "pregnancy": {
+          "recommendation": "Individualized risk-benefit assessment is required; do not stop abruptly solely because of pregnancy.",
+          "evidence": "Large observational datasets have not established a major increase in congenital malformations attributable to sertraline, but neonatal adaptation/withdrawal symptoms and possible PPHN risk with late-pregnancy SSRI exposure require discussion.",
+          "considerations": "If continued near delivery, alert neonatal clinicians to possible neonatal adaptation symptoms. Consider postpartum haemorrhage risk and the risks of untreated maternal illness."
+        },
+        "breastfeeding": {
+          "recommendation": "Sertraline is generally considered one of the preferred SSRIs during breastfeeding because infant exposure through milk is usually low.",
+          "evidence": "LactMed reports low milk levels and usually undetectable infant serum levels; most authoritative reviewers consider sertraline a preferred antidepressant during breastfeeding.",
+          "considerations": "Observe preterm or medically vulnerable infants for sedation, feeding difficulty or other symptoms; weigh maternal benefit and infant factors."
+        },
+        "renal": {
+          "recommendation": "Generally no dose adjustment is necessary.",
+          "doseAdjustment": "None routinely required based on renal impairment alone.",
+          "monitoring": "Monitor clinically as usual; consider overall frailty and comorbidity."
+        },
+        "hepatic": {
+          "recommendation": "Use cautiously; hepatic impairment can substantially increase exposure.",
+          "doseAdjustment": "Consider a lower dose or less frequent dosing; avoid in severe hepatic impairment according to the cited SmPC.",
+          "monitoring": "Monitor tolerability, clinical response and hepatic status where clinically indicated."
+        },
+        "cardiac": {
+          "recommendation": "Generally usable, but assess individual arrhythmia/QT risk.",
+          "doseAdjustment": "No routine cardiac dose adjustment, but avoid unnecessary combinations with QT-prolonging medicines.",
+          "monitoring": "Consider ECG/electrolyte assessment in patients with substantial QT risk or interacting medicines."
+        }
+      },
+      "contraindications": [
+        "Hypersensitivity to sertraline or excipients.",
+        "Concomitant treatment with irreversible MAO inhibitors.",
+        "Concomitant pimozide.",
+        "Do not use in severe hepatic impairment according to the cited SmPC because clinical data are insufficient."
+      ],
+      "stoppingSwitching": {
+        "taper": {
+          "protocol": "Avoid abrupt discontinuation. Product information recommends gradual dose reduction; one cited SmPC specifies at least 1–2 weeks, while NICE advises tapering antidepressants gradually and adjusting the rate to withdrawal symptoms, treatment duration and patient need. Longer tapers may be appropriate after long-term treatment or significant withdrawal symptoms.",
+          "withdrawalSymptoms": [
+            "Dizziness",
+            "Paresthesia/sensory disturbances",
+            "Insomnia or vivid dreams",
+            "Agitation or anxiety",
+            "Nausea or vomiting",
+            "Tremor",
+            "Headache"
+          ]
+        },
+        "switching": [
+          "Switching should be individualized according to the drug being stopped, the new drug, interaction risk and relapse risk.",
+          "Switching to or from an MAOI requires appropriate washout and specialist-level planning because of serotonin toxicity risk.",
+          "When switching from long-acting antidepressants such as fluoxetine, additional caution is required because residual drug persists for a prolonged period."
+        ],
+        "overdose": {
+          "toxicity": "Overdose can cause somnolence, nausea/vomiting, tachycardia, tremor, agitation and dizziness; coma and QTc prolongation/TdP have been reported. Fatalities have occurred, particularly with co-ingestants.",
+          "signs": [
+            "Somnolence",
+            "Nausea/vomiting",
+            "Tachycardia",
+            "Tremor",
+            "Agitation",
+            "Dizziness",
+            "Altered consciousness/coma",
+            "QTc prolongation or ventricular arrhythmia"
+          ],
+          "management": "Treat overdose as a medical emergency. Establish airway and supportive care as required; monitor vital signs and ECG. Activated charcoal may be considered in appropriate presentations. There is no specific antidote and dialysis is unlikely to be useful because of extensive distribution/protein binding."
+        }
+      },
+      "clinicalPearls": {
+        "advantages": [
+          "Broad evidence base across depressive and several anxiety/OCD-related disorders.",
+          "Once-daily administration.",
+          "Low abuse potential.",
+          "Generally low anticholinergic and sedative burden compared with many older antidepressants."
+        ],
+        "disadvantages": [
+          "Gastrointestinal adverse effects, especially nausea and diarrhoea.",
+          "Sexual dysfunction can be clinically significant.",
+          "Activation, akathisia or sleep disturbance can occur, particularly early in treatment.",
+          "Withdrawal symptoms can occur if stopped abruptly."
+        ],
+        "patientSelection": [
+          "Useful when an SSRI is appropriate for depression, OCD or anxiety-spectrum disorders.",
+          "Often a reasonable choice when minimizing anticholinergic and cardiotoxic burden is desirable, while still considering patient-specific QT and interaction risk.",
+          "Review bipolarity, suicidality, bleeding risk, seizure history, sodium risk and interacting serotonergic medicines before prescribing."
+        ],
+        "primaryTargetSymptoms": [
+          "Depressed mood and associated depressive symptoms",
+          "Obsessions and compulsions",
+          "Panic attacks and anticipatory anxiety",
+          "Social anxiety symptoms",
+          "PTSD symptom clusters",
+          "PMDD-related affective and behavioural symptoms"
+        ],
+        "expertPearls": [
+          "Do not interpret lack of improvement after a few days as treatment failure; allow an adequate therapeutic trial appropriate to the disorder.",
+          "In panic disorder, starting at 25 mg/day can improve early tolerability.",
+          "In OCD, therapeutic assessment generally requires longer treatment than a brief antidepressant trial.",
+          "If marked akathisia/restlessness appears soon after initiation or dose increase, increasing the dose may worsen the problem.",
+          "Sertraline has relatively low CYP-mediated interaction burden compared with several SSRIs, but it is still a mild-to-moderate CYP2D6 inhibitor and has important serotonergic/bleeding interactions."
+        ]
+      },
+      "brands": [
+        {
+          "brandName": "Zosert 50 Tablet",
+          "manufacturer": "Sun Pharmaceutical Industries Ltd",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 133,
+          "mrp": 148,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability/location dependent"
+        },
+        {
+          "brandName": "Daxid 50mg Tablet",
+          "manufacturer": "Mylan Pharmaceuticals Pvt Ltd - A Viatris Company",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "15 tablets",
+          "price": 152,
+          "mrp": 168.7,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability/location dependent"
+        },
+        {
+          "brandName": "SErta 50 Tablet",
+          "manufacturer": "Torrent Pharmaceuticals Ltd",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "15 tablets",
+          "price": 245,
+          "mrp": 245.1,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability/location dependent"
+        },
+        {
+          "brandName": "Sertanil 50 Tablet",
+          "manufacturer": "Zeelab Pharmacy Pvt Ltd",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 14.06,
+          "mrp": 14.06,
+          "currency": "INR",
+          "priceType": "1mg listed MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-08",
+          "availability": "Listing found; stock/location dependent"
+        },
+        {
+          "brandName": "Sertral 50mg Tablet",
+          "manufacturer": "Chemo Healthcare Pvt Ltd",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 58.3,
+          "mrp": 64.69,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-06",
+          "availability": "Currently listed as sold out in retrieved listing"
+        },
+        {
+          "brandName": "SEtral 50 Tablet",
+          "manufacturer": "D D Pharmaceuticals",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 46.2,
+          "mrp": 51.23,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability/location dependent"
+        },
+        {
+          "brandName": "Serset 50 Tablet",
+          "manufacturer": "Recoupe Pharma",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 143,
+          "mrp": 165.94,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-04",
+          "availability": "Currently listed as sold out in retrieved listing"
+        },
+        {
+          "brandName": "Sertee 100 Tablet",
+          "manufacturer": "Not verified from retrieved listing",
+          "strength": "100 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 137,
+          "mrp": 152.5,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-08",
+          "availability": "Listed; availability/location dependent"
+        },
+        {
+          "brandName": "Zovisert 50 Tablet",
+          "manufacturer": "Not verified from retrieved listing",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 63.3,
+          "mrp": 70.31,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-01-19",
+          "availability": "Listing retrieved; currently sold out in retrieved listing"
+        },
+        {
+          "brandName": "Tralin 100",
+          "manufacturer": "Alkem Laboratories Ltd",
+          "strength": "100 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 110,
+          "mrp": null,
+          "currency": "INR",
+          "priceType": "Historical public listing price",
+          "source": "MedicineIndia / India drug-price listing",
+          "lastUpdated": "2023-05-08",
+          "availability": "Verify current price and availability"
+        },
+        {
+          "brandName": "Sertil 50",
+          "manufacturer": "Abbott Healthcare Pvt Ltd",
+          "strength": "50 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 35,
+          "mrp": null,
+          "currency": "INR",
+          "priceType": "Historical public listing price",
+          "source": "MedicineIndia / India drug-price listing",
+          "lastUpdated": "2023-04-19",
+          "availability": "Verify current price and availability"
+        }
+      ],
+      "references": [
+        {
+          "id": "dailymed-sertraline-2026",
+          "title": "Sertraline Hydrochloride Tablets — Prescribing Information",
+          "type": "Regulatory prescribing information",
+          "organization": "DailyMed / U.S. National Library of Medicine",
+          "year": 2026,
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e554537c-9469-4f9a-9157-d5763bb8b720",
+          "accessDate": "2026-09-14",
+          "notes": "Updated July 21, 2026; includes boxed warning, indications, dosing, contraindications, warnings and precautions."
+        },
+        {
+          "id": "emc-sertraline-2026",
+          "title": "Sertraline 50 mg film-coated tablets — Summary of Product Characteristics",
+          "type": "SmPC",
+          "organization": "electronic Medicines Compendium",
+          "year": 2026,
+          "url": "https://www.medicines.org.uk/emc/product/14327/smpc",
+          "accessDate": "2026-09-14",
+          "notes": "Updated January 28, 2026; used for indications, dosing, safety, interactions and pharmacokinetics."
+        },
+        {
+          "id": "nice-ng222",
+          "title": "Depression in adults: treatment and management (NG222)",
+          "type": "Clinical guideline",
+          "organization": "NICE",
+          "year": 2022,
+          "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations",
+          "accessDate": "2026-09-14",
+          "notes": "Reviewed January 30, 2026; used for antidepressant treatment, duration, monitoring, response and switching principles."
+        },
+        {
+          "id": "nice-cg31",
+          "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment",
+          "type": "Clinical guideline",
+          "organization": "NICE",
+          "year": 2005,
+          "url": "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations",
+          "accessDate": "2026-09-14",
+          "notes": "Used for SSRI selection, adequate trial, dose escalation, continuation and tapering principles in adult OCD."
+        },
+        {
+          "id": "lactmed-sertraline-2026",
+          "title": "Sertraline — Drugs and Lactation Database (LactMed)",
+          "type": "Drug and lactation reference",
+          "organization": "National Library of Medicine / NCBI",
+          "year": 2026,
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK501191/",
+          "accessDate": "2026-09-14",
+          "notes": "Last revision August 15, 2026; used for breastfeeding exposure and infant safety information."
+        },
+        {
+          "id": "mothertobaby-sertraline-2025",
+          "title": "Sertraline (Zoloft) — Pregnancy Fact Sheet",
+          "type": "Teratology information reference",
+          "organization": "MotherToBaby / Organization of Teratology Information Specialists",
+          "year": 2025,
+          "url": "https://mothertobaby.org/fact-sheets/sertraline-zoloft-pregnancy/",
+          "accessDate": "2026-09-14",
+          "notes": "Updated August 1, 2025; used for pregnancy and neonatal adaptation evidence."
+        },
+        {
+          "id": "1mg-sertral-2026",
+          "title": "Sertral 50mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Sertral-Tablet-407116",
+          "accessDate": "2026-09-14",
+          "notes": "Current listing retrieved September 2026; prices are dynamic and should be rechecked before relying on them."
+        },
+        {
+          "id": "1mg-setral-2026",
+          "title": "SEtral 50 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/setral-50-mg-tablet-273263",
+          "accessDate": "2026-09-14",
+          "notes": "Current listing retrieved September 2026; prices are dynamic and should be rechecked before relying on them."
+        },
+        {
+          "id": "1mg-zoloft-2026",
+          "title": "Zoloft 100mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/zoloft-100mg-tablet-464751",
+          "accessDate": "2026-09-14",
+          "notes": "Current listing retrieved September 2026; prices are dynamic and should be rechecked before relying on them."
+        },
+        {
+          "id": "1mg-zosert-2026",
+          "title": "Zosert 50 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Zosert-Tablet-32456",
+          "accessDate": "2026-09-14",
+          "notes": "Retrieved September 2026; listed price ₹133 for 10 tablets, MRP ₹148. Prices/availability vary by location and batch."
+        },
+        {
+          "id": "1mg-daxid-2026",
+          "title": "Daxid 50mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Daxid-Tablet-162723",
+          "accessDate": "2026-09-14",
+          "notes": "Retrieved September 2026; 1mg listing showed ₹152 for 15 tablets, MRP ₹168.70. A 10-tablet listing was also found; pack-size-specific pricing varies."
+        },
+        {
+          "id": "1mg-serta-2026",
+          "title": "SErta 50 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Serta-Tablet-324102",
+          "accessDate": "2026-09-14",
+          "notes": "Retrieved September 2026; listing showed ₹245 for 15 tablets, MRP ₹245.10."
+        },
+        {
+          "id": "1mg-sertanil-2026",
+          "title": "Sertanil 50 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/sertanil-50-tablet-750331",
+          "accessDate": "2026-09-14",
+          "notes": "Retrieved September 2026; listing showed MRP ₹14.06 for 10 tablets."
+        },
+        {
+          "id": "1mg-sertee-2026",
+          "title": "Sertee 100 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/sertee-100-tablet-260071",
+          "accessDate": "2026-09-14",
+          "notes": "Retrieved September 2026; listing showed ₹137 for 10 tablets, MRP ₹152.50."
+        },
+        {
+          "id": "india-drug-index-2026",
+          "title": "India Drug Index",
+          "type": "Indian drug database",
+          "organization": "India Drug Index / MedEngage",
+          "year": 2026,
+          "url": "https://play.google.com/store/apps/details?id=com.medengage.drugindex",
+          "accessDate": "2026-09-14",
+          "notes": "The public database description states that India Drug Index covers Indian brands, companies and pricing and is updated regularly. Specific in-app sertraline records/prices were not directly retrievable through the public web interface; therefore individual prices in this JSON are not attributed to India Drug Index unless separately verified."
+        }
+      ]
+    },
+    {
+      "id": "escitalopram",
+      "identity": {
+        "genericName": "Escitalopram",
+        "brandNames": [
+          "Nexito",
+          "Rexito",
+          "Rexipra",
+          "Stalopam",
+          "Esopram",
+          "Lexipram",
+          "Esc",
+          "Exito",
+          "Ciprex"
+        ],
+        "class": "Selective serotonin reuptake inhibitor (SSRI)",
+        "category": "Antidepressant / anxiolytic",
+        "nbn": {
+          "domain": "Serotonergic",
+          "mechanism": "Highly selective serotonin transporter (SERT) inhibition"
+        },
+        "genericAvailable": true,
+        "habitForming": false
+      },
+      "regulatoryIndications": [
+        "United States: Major depressive disorder (MDD) in adults and pediatric patients aged 12 years and older",
+        "United States: Generalized anxiety disorder (GAD) in adults",
+        "United Kingdom: Major depressive episodes",
+        "United Kingdom: Panic disorder with or without agoraphobia",
+        "United Kingdom: Social anxiety disorder (social phobia)",
+        "United Kingdom: Generalised anxiety disorder",
+        "United Kingdom: Obsessive-compulsive disorder (OCD) — current SmPC; regulatory status varies by jurisdiction"
+      ],
+      "commonUses": [
+        "Major depressive disorder",
+        "Generalized anxiety disorder",
+        "Panic disorder with or without agoraphobia",
+        "Social anxiety disorder",
+        "Obsessive-compulsive disorder — jurisdiction-specific licensed/off-label status should be checked",
+        "Depressive disorders with prominent anxiety symptoms",
+        "Premenstrual dysphoric disorder — off-label use; evidence exists but regulatory status varies"
+      ],
+      "warnings": [
+        "Monitor for clinical worsening, suicidal thoughts and behaviour, especially during initiation and dose changes and particularly in younger patients.",
+        "Screen for bipolar disorder, mania and hypomania before starting treatment.",
+        "Serotonin syndrome can occur, especially with MAOIs and other serotonergic medicines.",
+        "Discontinuation symptoms are common, particularly after abrupt cessation; taper gradually.",
+        "Hyponatraemia/SIADH can occur, with higher risk in older adults and patients with other risk factors.",
+        "Bleeding risk may increase with NSAIDs, aspirin, anticoagulants and other medicines affecting haemostasis.",
+        "Escitalopram causes dose-dependent QT prolongation; assess cumulative cardiac/QT risk.",
+        "Use caution in patients with seizure disorders and discontinue/reassess if seizures emerge or worsen.",
+        "Angle-closure glaucoma can occur in susceptible patients because of mydriasis.",
+        "Sexual dysfunction may occur and can occasionally persist after discontinuation."
+      ],
+      "mechanism": {
+        "clinical": "Escitalopram is the S-enantiomer of citalopram and selectively inhibits the serotonin transporter (SERT), reducing presynaptic serotonin reuptake and increasing serotonergic neurotransmission. Its clinical pharmacology is dominated by SERT inhibition with little direct activity at other neurotransmitter receptors.",
+        "inDepth": {
+          "receptors": [
+            "Low or negligible affinity is reported for 5-HT1A, 5-HT2, dopamine D1/D2, alpha1-, alpha2- and beta-adrenoceptors, histamine H1, muscarinic cholinergic, benzodiazepine and opioid receptors.",
+            "The relative absence of clinically important receptor antagonism explains its low anticholinergic, antihistaminergic and alpha-adrenergic burden compared with many older psychotropics."
+          ],
+          "transporters": [
+            "SERT: highly selective inhibition of the serotonin transporter is the principal pharmacological action.",
+            "Escitalopram also binds an allosteric site on SERT with much lower affinity than the primary binding site; this allosteric interaction contributes to the characteristic pharmacology of the S-enantiomer."
+          ],
+          "affinity": [
+            "Very high selectivity for SERT over norepinephrine and dopamine transporters and over the major CNS receptor families.",
+            "The UK SmPC describes high affinity for the primary SERT binding site and approximately 1000-fold lower affinity for the allosteric SERT site."
+          ],
+          "potency": [
+            "Clinical efficacy is generally achieved within the 5–20 mg/day range depending on indication, age, tolerability and jurisdiction-specific prescribing information.",
+            "The US label found no additional MDD benefit for 20 mg/day over 10 mg/day in its fixed-dose trial, although 20 mg/day remains the maximum recommended dose."
+          ],
+          "structureActivity": "Escitalopram is the therapeutically active S-enantiomer of racemic citalopram. Its high SERT selectivity and additional allosteric SERT binding distinguish it pharmacologically from less selective antidepressants and from racemic citalopram."
+        }
+      },
+      "evidence": [
+        {
+          "indication": "Major depressive disorder / major depressive episodes",
+          "trialDose": "Usually 10 mg once daily; may increase to 20 mg/day depending on response and tolerability.",
+          "onset": "Clinical response commonly requires approximately 2–4 weeks, although some improvement may occur earlier.",
+          "numberOfRCTs": 30,
+          "comparator": "Multiple antidepressants and placebo across the evidence base.",
+          "effectSize": "A 2023 systematic review/meta-analysis included 30 randomized trials comparing escitalopram with other antidepressants. It found escitalopram superior to citalopram for acute response and remission; differences versus other antidepressants varied by outcome and follow-up.",
+          "summary": "Current product information reports efficacy in 3 of 4 short-term 8-week placebo-controlled studies and relapse-prevention benefit in responders followed for up to 36 weeks. A 30-study meta-analysis found overall advantages for escitalopram in acute-phase efficacy, acceptability and tolerability, while early and follow-up response did not consistently differ from other antidepressants."
+        },
+        {
+          "indication": "Generalized anxiety disorder",
+          "trialDose": "10 mg once daily; may increase to 20 mg/day according to response and tolerability.",
+          "onset": "Improvement can begin during the first week, but response should be assessed over several weeks.",
+          "numberOfRCTs": 4,
+          "comparator": "Placebo-controlled trials.",
+          "effectSize": "In pooled data from three similarly designed trials, response was 47.5% with escitalopram versus 28.9% with placebo; remission was 37.1% versus 20.8%.",
+          "summary": "The current UK SmPC reports efficacy of 10 and 20 mg/day in 4 of 4 placebo-controlled studies, with sustained benefit from week 1 in pooled data. Long-term maintenance of efficacy has also been demonstrated in responders."
+        },
+        {
+          "indication": "Social anxiety disorder",
+          "trialDose": "10 mg once daily; depending on response, reduce to 5 mg or increase to 20 mg/day.",
+          "onset": "Symptom relief commonly requires 2–4 weeks; treatment should generally be continued long enough to consolidate response.",
+          "numberOfRCTs": 3,
+          "comparator": "Placebo-controlled short-term trials.",
+          "effectSize": "The UK SmPC reports efficacy in three 12-week placebo-controlled studies; exact pooled effect size was not entered because a single directly comparable effect estimate was not identified in the reviewed sources.",
+          "summary": "Escitalopram was effective in three short-term 12-week studies and in a 6-month relapse-prevention study of responders. NICE recommends escitalopram or sertraline when adults with social anxiety disorder prefer pharmacological treatment after discussion of CBT."
+        },
+        {
+          "indication": "Panic disorder with or without agoraphobia",
+          "trialDose": "Start 5 mg once daily for the first week, then 10 mg/day; may increase to 20 mg/day.",
+          "onset": "Early anxiety may transiently increase; meaningful benefit generally develops over several weeks, with maximum effectiveness described at around 3 months in the UK SmPC.",
+          "numberOfRCTs": null,
+          "comparator": "Placebo-controlled clinical evidence; exact RCT count not entered.",
+          "effectSize": "Not entered as a single pooled effect size because a directly comparable pooled estimate was not identified in the reviewed primary sources.",
+          "summary": "Escitalopram is licensed for panic disorder in the reviewed UK SmPC and is included by NICE among SSRIs licensed for longer-term pharmacological management of panic disorder. A low initial dose is recommended to reduce paradoxical early anxiety."
+        },
+        {
+          "indication": "Obsessive-compulsive disorder",
+          "trialDose": "10 mg once daily; may increase to 20 mg/day.",
+          "onset": "OCD usually requires a longer therapeutic assessment than depression; response should not be judged after only a few days or one to two weeks.",
+          "numberOfRCTs": 1,
+          "comparator": "Placebo in a randomized, double-blind study.",
+          "effectSize": "In the cited study, 20 mg/day separated from placebo on Y-BOCS total score after 12 weeks; at 24 weeks both 10 and 20 mg/day were superior to placebo.",
+          "summary": "The current UK SmPC reports a randomized double-blind OCD study in which 20 mg/day separated from placebo at 12 weeks, with both 10 and 20 mg/day superior to placebo at 24 weeks. Relapse-prevention benefit was demonstrated in responders treated during an open-label phase and then randomized."
+        }
+      ],
+      "dosing": {
+        "indications": [
+          {
+            "indication": "Major depressive disorder / major depressive episodes",
+            "startingDose": "10 mg once daily",
+            "targetDose": "10 mg once daily; individualize based on response and tolerability",
+            "maximumDose": "20 mg/day",
+            "titration": "US label: increase to 20 mg/day no more often than once weekly in adults; the UK SmPC allows individual response-guided increase to 20 mg/day."
+          },
+          {
+            "indication": "Generalized anxiety disorder",
+            "startingDose": "10 mg once daily in adults",
+            "targetDose": "10 mg once daily; increase if required and tolerated",
+            "maximumDose": "20 mg/day",
+            "titration": "Increase to 20 mg/day no more often than once weekly under the US label."
+          },
+          {
+            "indication": "Panic disorder",
+            "startingDose": "5 mg once daily for the first week",
+            "targetDose": "10 mg once daily",
+            "maximumDose": "20 mg/day",
+            "titration": "Increase to 10 mg after 1 week; subsequent increase to 20 mg/day may be considered according to response and tolerability."
+          },
+          {
+            "indication": "Social anxiety disorder",
+            "startingDose": "10 mg once daily",
+            "targetDose": "10 mg once daily; some patients may do better at 5 mg",
+            "maximumDose": "20 mg/day",
+            "titration": "After response/tolerability assessment, dose may be reduced to 5 mg or increased to 20 mg/day."
+          },
+          {
+            "indication": "Obsessive-compulsive disorder",
+            "startingDose": "10 mg once daily",
+            "targetDose": "10–20 mg/day",
+            "maximumDose": "20 mg/day",
+            "titration": "Increase according to response and tolerability; allow an adequate OCD trial before judging non-response."
+          },
+          {
+            "indication": "Major depressive disorder in adolescents aged 12–17 years — US labeling",
+            "startingDose": "10 mg once daily",
+            "targetDose": "10 mg once daily",
+            "maximumDose": "20 mg/day",
+            "titration": "US label permits increase to 20 mg/day at intervals of no less than 3 weeks; pediatric regulatory status varies by product and jurisdiction."
+          }
+        ],
+        "dosageForms": [
+          "Immediate-release oral tablets: 5 mg, 10 mg and 20 mg strengths.",
+          "Local Indian formulations and pack sizes vary by manufacturer."
+        ],
+        "administrationTips": [
+          "Administer once daily, morning or evening, with or without food.",
+          "If insomnia or activation occurs, morning administration may be preferable; if somnolence occurs, evening administration may be more convenient.",
+          "For panic disorder, start at 5 mg/day to reduce early anxiogenic effects.",
+          "Do not increase rapidly simply because early improvement is absent; antidepressant and anxiety-disorder response generally requires several weeks.",
+          "If discontinuing, taper rather than stopping abruptly."
+        ],
+        "renalAdjustment": "No adjustment is necessary in mild or moderate renal impairment. US labeling states that dosing in adults with creatinine clearance below 20 mL/min has not been determined; the UK SmPC advises caution when creatinine clearance is below 30 mL/min.",
+        "hepaticAdjustment": "Use a lower starting dose in hepatic impairment. The UK SmPC recommends 5 mg/day for the first 2 weeks in mild-to-moderate hepatic impairment, then up to 10 mg/day according to response; US labeling recommends 10 mg/day in hepatic impairment. Severe hepatic impairment requires particularly cautious titration."
+      },
+      "trajectory": {
+        "ifWorks": {
+          "responseDefinition": "Assess improvement in core symptoms, functioning and patient-defined goals rather than relying on early subjective side-effect changes alone.",
+          "remissionGoal": "Aim for remission where clinically achievable, with restoration of function and minimization of residual symptoms.",
+          "continuationDuration": "For major depression, the UK SmPC recommends at least 6 months after symptom resolution for consolidation; NICE recommends antidepressant treatment for at least 6 months including after remission, with longer treatment based on relapse risk.",
+          "maintenance": "For recurrent depression or chronic anxiety/OCD conditions, continue when relapse risk and prior history justify it, with periodic review of dose, benefit, adverse effects and ongoing indication."
+        },
+        "ifFails": {
+          "nonResponseDefinition": "Before declaring treatment failure, confirm the diagnosis, adherence, adequate dose and duration, tolerability, comorbidity, substance use, psychosocial contributors and whether the chosen treatment matches the disorder.",
+          "assessmentTime": "For depression, allow roughly 2–4 weeks for an initial antidepressant response and longer when partial response is emerging. GAD may show early improvement but should be assessed over several weeks. OCD and panic disorder generally require longer disorder-specific trials.",
+          "escalation": "If tolerated and within the licensed range, optimize dose. However, higher doses can increase adverse effects and are not necessarily more effective; the US MDD fixed-dose trial did not show additional benefit of 20 mg over 10 mg.",
+          "switchingTriggers": "Consider switching after an adequate trial with insufficient response, unacceptable adverse effects, clinically significant activation/akathisia, emerging mania, important interaction or contraindication, or patient preference."
+        },
+        "augmentation": [
+          "For depression with incomplete response, use a structured strategy: confirm diagnosis/adherence, optimize dose when appropriate, add evidence-based psychological treatment, or switch antidepressant depending on the clinical context.",
+          "For social anxiety disorder, NICE recommends adding individual CBT after partial response to an SSRI at 10–12 weeks.",
+          "For OCD, combine or sequence pharmacotherapy and CBT/ERP according to symptom severity and prior response rather than relying on dose escalation alone."
+        ]
+      },
+      "safety": {
+        "criticalWarnings": [
+          "Suicidal thoughts and behaviours: monitor closely during early treatment and after dose changes, particularly in patients younger than 25 years.",
+          "Serotonin syndrome: risk increases with MAOIs and other serotonergic medicines.",
+          "QT prolongation: escitalopram produces dose-dependent QT prolongation; avoid in congenital long-QT syndrome and with contraindicated QT-prolonging medicines according to the relevant product information.",
+          "Hyponatraemia/SIADH: risk is increased in older adults and other susceptible patients.",
+          "Bleeding: risk increases with NSAIDs, aspirin, anticoagulants and other platelet/coagulation-active drugs.",
+          "Mania/hypomania: screen for bipolar disorder before treatment.",
+          "Discontinuation syndrome: abrupt cessation can cause dizziness, sensory disturbances, anxiety, insomnia and other symptoms."
+        ],
+        "common": [
+          "Nausea",
+          "Headache",
+          "Insomnia",
+          "Somnolence",
+          "Fatigue",
+          "Sweating increased",
+          "Diarrhoea",
+          "Constipation",
+          "Dry mouth",
+          "Dizziness",
+          "Ejaculation disorder / delayed ejaculation",
+          "Decreased libido",
+          "Anorgasmia"
+        ],
+        "uncommon": [
+          "Agitation",
+          "Nervousness",
+          "Bruxism",
+          "Panic attack or transient activation",
+          "Taste disturbance",
+          "Syncope",
+          "Mydriasis",
+          "Visual disturbance",
+          "Tinnitus",
+          "Tachycardia",
+          "Epistaxis",
+          "Gastrointestinal bleeding",
+          "Urticaria/rash/pruritus",
+          "Weight decrease",
+          "Menstrual abnormalities",
+          "Akathisia/psychomotor restlessness"
+        ],
+        "rare": [
+          "Serotonin syndrome",
+          "Anaphylactic reaction",
+          "Bradycardia",
+          "Severe cutaneous reactions",
+          "Mania",
+          "Hepatitis or clinically significant liver injury",
+          "Seizure/convulsion",
+          "Angioedema"
+        ],
+        "lifeThreatening": [
+          "Serotonin syndrome",
+          "Torsade de pointes or other ventricular arrhythmia",
+          "Severe hyponatraemia with neurological complications",
+          "Major bleeding",
+          "Severe hypersensitivity/anaphylaxis",
+          "Severe overdose with coma, seizures or cardiac toxicity"
+        ],
+        "quickProfile": {
+          "weightGain": "Generally low; controlled trials did not show clinically important weight differences versus placebo, although weight gain is listed as a possible adverse effect.",
+          "sedation": "Low-to-moderate; somnolence occurs and may be clinically relevant in some patients.",
+          "sexualDysfunction": "Clinically important SSRI adverse effect; delayed ejaculation, decreased libido and anorgasmia are well documented.",
+          "qtRisk": "Clinically relevant and dose-dependent; QTc prolongation is greater at supratherapeutic exposure and risk rises with other QT factors.",
+          "metabolicRisk": "Low relative to antipsychotics; no major metabolic syndrome signal in routine clinical use."
+        },
+        "management": [
+          {
+            "sideEffect": "Nausea / gastrointestinal symptoms",
+            "management": "Often improve during the first 1–2 weeks. Consider taking with food, slower titration or dose adjustment if persistent or clinically significant."
+          },
+          {
+            "sideEffect": "Insomnia / activation",
+            "management": "Consider morning dosing, slower titration and reassessment for akathisia, anxiety activation or emerging bipolarity."
+          },
+          {
+            "sideEffect": "Somnolence",
+            "management": "Consider evening dosing and assess other sedating medicines or medical contributors."
+          },
+          {
+            "sideEffect": "Sexual dysfunction",
+            "management": "Ask proactively, assess baseline versus treatment-emergent symptoms, then consider dose optimization, switching or evidence-based adjunctive treatment when appropriate."
+          },
+          {
+            "sideEffect": "Akathisia / marked restlessness",
+            "management": "Do not reflexively increase the dose; reassess timing, severity, suicidality and differential diagnosis, and consider dose reduction or switching."
+          },
+          {
+            "sideEffect": "Hyponatraemia",
+            "management": "Check serum sodium when clinically indicated, especially in older or high-risk patients; symptomatic hyponatraemia requires prompt medical assessment and treatment reassessment."
+          },
+          {
+            "sideEffect": "QT risk",
+            "management": "Review other QT-prolonging medicines and correct hypokalaemia/hypomagnesaemia. Consider baseline ECG in patients with substantial cardiac/QT risk."
+          }
+        ]
+      },
+      "pharmacokinetics": {
+        "halfLife": "Approximately 30 hours after multiple dosing.",
+        "steadyState": "Approximately 1 week with once-daily dosing.",
+        "bioavailability": "Approximately 80% absolute oral bioavailability is expected; absorption is almost complete and independent of food.",
+        "proteinBinding": "Less than 80% for escitalopram and its main metabolites.",
+        "metabolism": "Hepatic metabolism primarily via CYP2C19, with smaller contributions from CYP3A4 and CYP2D6. Demethylated and didemethylated metabolites are pharmacologically active.",
+        "elimination": "Parent drug and metabolites are eliminated through hepatic metabolism and renal routes; most of the administered dose is excreted in urine as metabolites. Exposure is increased in older adults and in hepatic impairment."
+      },
+      "interactions": [
+        {
+          "drug": "Irreversible MAOIs",
+          "severity": "Major / contraindicated",
+          "significance": "Risk of life-threatening serotonin syndrome.",
+          "action": "Do not co-administer. Allow at least 14 days between stopping an MAOI and starting escitalopram, and at least 14 days between stopping escitalopram and starting an MAOI under the US label."
+        },
+        {
+          "drug": "Pimozide",
+          "severity": "Major / contraindicated",
+          "significance": "Potential for clinically important QT/cardiac toxicity.",
+          "action": "Contraindicated."
+        },
+        {
+          "drug": "QT-prolonging medicines",
+          "severity": "Major / avoid where contraindicated",
+          "significance": "Additive QT prolongation and ventricular arrhythmia risk.",
+          "action": "Review cumulative QT risk; UK product information contraindicates concomitant use with medicines known to prolong the QT interval."
+        },
+        {
+          "drug": "Serotonergic medicines: tramadol, fentanyl, methadone, triptans, lithium, buspirone, amphetamines, St John’s wort and other antidepressants",
+          "severity": "Major / caution",
+          "significance": "Increased risk of serotonin syndrome.",
+          "action": "Avoid unnecessary combinations; if clinically necessary, educate and monitor for serotonin toxicity."
+        },
+        {
+          "drug": "NSAIDs, aspirin, warfarin, anticoagulants and antiplatelet medicines",
+          "severity": "Moderate / clinically important",
+          "significance": "Increased bleeding risk.",
+          "action": "Assess individual bleeding risk and monitor clinically; monitor anticoagulation when appropriate."
+        },
+        {
+          "drug": "CYP2C19 inhibitors: omeprazole, esomeprazole, fluconazole, fluvoxamine and related inhibitors",
+          "severity": "Moderate",
+          "significance": "Can increase escitalopram exposure; omeprazole increased concentrations by about 50% in the cited SmPC.",
+          "action": "Monitor adverse effects; consider lower escitalopram dosing when clinically appropriate."
+        },
+        {
+          "drug": "Cimetidine",
+          "severity": "Moderate",
+          "significance": "Can increase escitalopram exposure; the cited SmPC reports an approximately 70% increase.",
+          "action": "Use caution and monitor for adverse effects; dose adjustment may be warranted."
+        },
+        {
+          "drug": "CYP2D6 substrates with narrow therapeutic index: flecainide, propafenone, metoprolol; selected TCAs and antipsychotics",
+          "severity": "Moderate",
+          "significance": "Escitalopram inhibits CYP2D6 and may increase concentrations of susceptible substrates.",
+          "action": "Use caution and consider dose adjustment/monitoring where clinically indicated."
+        },
+        {
+          "drug": "Medicines lowering seizure threshold, including bupropion, tramadol and some antipsychotics/antidepressants",
+          "severity": "Moderate",
+          "significance": "Potentially additive seizure risk.",
+          "action": "Use caution, particularly in patients with epilepsy or other seizure risk."
+        },
+        {
+          "drug": "Hypokalaemia/hypomagnesaemia-inducing medicines",
+          "severity": "Moderate",
+          "significance": "Electrolyte abnormalities increase the arrhythmogenic risk of QT-prolonging drugs.",
+          "action": "Correct electrolyte abnormalities and reassess cumulative QT risk."
+        },
+        {
+          "drug": "Alcohol",
+          "severity": "Clinical caution",
+          "significance": "No major pharmacokinetic interaction is expected, but combined psychotropic effects can worsen impairment or adverse effects.",
+          "action": "Avoid or minimize clinically, particularly when sedation, impaired judgement or driving risk is relevant."
+        }
+      ],
+      "specialPopulations": {
+        "elderly": {
+          "recommendation": "Escitalopram can be used, but systemic exposure is higher in older adults and dose escalation should be cautious.",
+          "doseAdjustment": "UK SmPC: start 5 mg once daily and increase to 10 mg/day if needed. US labeling recommends 10 mg/day in most elderly patients.",
+          "monitoring": "Monitor sodium, falls, bleeding, QT risk, cognition, tolerability and polypharmacy."
+        },
+        "childrenAdolescents": {
+          "recommendation": "Regulatory status varies substantially by jurisdiction. Current US labeling supports MDD from age 12 years; some current US product labeling supports GAD from age 7 years. The reviewed UK SmPC advises against routine use below 18 years.",
+          "doseAdjustment": "US MDD: 10 mg/day, with increase to 20 mg/day no sooner than 3 weeks in adolescents aged 12–17 years.",
+          "monitoring": "Close monitoring for suicidality, agitation, hostility/behavioural activation and clinical worsening is essential. Monitor growth and development during longer-term treatment."
+        },
+        "pregnancy": {
+          "recommendation": "Use individualized risk-benefit assessment; do not abruptly discontinue effective treatment solely because pregnancy occurs.",
+          "evidence": "MotherToBaby summarizes more than 15,000 reported pregnancies exposed to citalopram/escitalopram and notes that most studies have not found an increased risk of major birth defects. Confounding by underlying illness remains important.",
+          "considerations": "Late-pregnancy SSRI exposure is associated with neonatal adaptation symptoms and may increase PPHN risk. Current evidence supports discussing absolute risk, untreated illness and neonatal monitoring rather than routine abrupt discontinuation."
+        },
+        "breastfeeding": {
+          "recommendation": "Escitalopram is compatible with breastfeeding in many clinical situations when maternal treatment is required, based on LactMed; product information may be more conservative.",
+          "evidence": "LactMed reports low milk levels with maternal doses up to 20 mg/day and generally low infant exposure; a relative infant dose around 2.6–3.9% is reported in several studies.",
+          "considerations": "Monitor especially young, exclusively breastfed or medically vulnerable infants for excess drowsiness, restlessness, agitation, poor feeding and poor weight gain."
+        },
+        "renal": {
+          "recommendation": "No routine dose adjustment in mild or moderate renal impairment.",
+          "doseAdjustment": "US labeling: dose in CrCl below 20 mL/min has not been determined. UK SmPC advises caution when CrCl is below 30 mL/min.",
+          "monitoring": "Monitor tolerability and clinical response; use extra caution in severe renal impairment."
+        },
+        "hepatic": {
+          "recommendation": "Exposure is increased in hepatic impairment; use lower starting dose and slower titration.",
+          "doseAdjustment": "UK SmPC: 5 mg/day for first 2 weeks in mild-to-moderate hepatic impairment, then up to 10 mg/day. US labeling recommends 10 mg/day in hepatic impairment.",
+          "monitoring": "Monitor adverse effects, especially activation, somnolence, QT risk and serotonergic adverse effects."
+        },
+        "cardiac": {
+          "recommendation": "Use cautiously in significant cardiac disease because escitalopram produces dose-dependent QT prolongation.",
+          "doseAdjustment": "Avoid unnecessary doses above 10 mg in high-risk patients and follow local product-specific maximums; lower doses may be appropriate based on age, hepatic function and QT risk.",
+          "monitoring": "Consider baseline ECG and electrolytes in patients with substantial cardiac risk, congenital long-QT syndrome, bradycardia, recent MI, uncompensated heart failure or multiple QT-prolonging drugs."
+        }
+      },
+      "contraindications": [
+        "Hypersensitivity to escitalopram, citalopram or formulation excipients.",
+        "Concomitant use with MAOIs, including within the required washout period.",
+        "Concomitant pimozide.",
+        "Known QT interval prolongation or congenital long-QT syndrome according to the reviewed UK SmPC.",
+        "Concomitant medicines known to prolong the QT interval according to the reviewed UK SmPC."
+      ],
+      "stoppingSwitching": {
+        "taper": {
+          "protocol": "Avoid abrupt cessation. The US label recommends gradual dose reduction whenever possible. The UK SmPC recommends tapering over at least 1–2 weeks, while also noting that some patients require slower reductions over several weeks or months depending on duration of treatment and withdrawal symptoms.",
+          "withdrawalSymptoms": [
+            "Dizziness",
+            "Paresthesias / electric-shock sensations",
+            "Insomnia and vivid dreams",
+            "Anxiety or agitation",
+            "Nausea/vomiting",
+            "Tremor",
+            "Headache",
+            "Sweating",
+            "Diarrhoea",
+            "Palpitations",
+            "Emotional lability / irritability",
+            "Visual disturbance"
+          ]
+        },
+        "switching": [
+          "Switching should be individualized according to the drug being stopped, the destination drug, interaction risk and relapse risk.",
+          "MAOI switches require formal washout: the US label recommends at least 14 days between stopping an MAOI and starting escitalopram, and at least 14 days between stopping escitalopram and starting an MAOI.",
+          "When switching between SSRIs, a direct switch or short taper may sometimes be clinically appropriate, but the strategy depends on the specific drug and patient risk; avoid unnecessary serotonergic overlap.",
+          "Fluoxetine requires particular caution because of its long half-life and persistent CYP2D6 inhibition."
+        ],
+        "overdose": {
+          "toxicity": "Most reported isolated overdoses are mild or asymptomatic, but overdose can cause CNS symptoms, serotonin toxicity, seizures, QT prolongation, hypotension, tachycardia, electrolyte disturbances, coma and rarely death, especially with co-ingestants.",
+          "signs": [
+            "Dizziness",
+            "Tremor",
+            "Agitation",
+            "Nausea/vomiting",
+            "Serotonin syndrome",
+            "Seizure",
+            "Coma",
+            "Hypotension or tachycardia",
+            "QT prolongation / ventricular arrhythmia",
+            "Hypokalaemia or hyponatraemia"
+          ],
+          "management": "Treat as a medical emergency. Maintain airway and supportive care, monitor vital signs and ECG, and manage complications symptomatically. Activated charcoal may be considered in appropriate early presentations according to toxicology guidance. There is no specific antidote."
+        }
+      },
+      "clinicalPearls": {
+        "advantages": [
+          "Highly selective SSRI with relatively low anticholinergic, antihistaminergic and alpha-adrenergic burden.",
+          "Strong evidence base for depression and several anxiety disorders.",
+          "Once-daily administration with or without food.",
+          "Generally low abuse and dependence potential.",
+          "Often well tolerated at 10 mg/day; dose-related adverse effects become more prominent at 20 mg/day."
+        ],
+        "disadvantages": [
+          "Nausea and other gastrointestinal effects are common early adverse effects.",
+          "Sexual dysfunction is clinically important and should be actively assessed.",
+          "Activation, insomnia or akathisia can occur, especially early or after dose increases.",
+          "QT prolongation is more clinically relevant than with several other SSRIs.",
+          "Discontinuation symptoms can be prominent after abrupt cessation."
+        ],
+        "patientSelection": [
+          "Good option when an SSRI is appropriate for depression, GAD or selected anxiety-spectrum disorders.",
+          "Particularly useful when a low anticholinergic burden is desirable.",
+          "Consider alternatives or lower doses in patients with significant QT risk, severe hepatic impairment or major CYP2C19 interaction burden."
+        ],
+        "primaryTargetSymptoms": [
+          "Depressed mood and associated depressive symptoms",
+          "Excessive and difficult-to-control worry in GAD",
+          "Panic attacks and anticipatory anxiety",
+          "Social anxiety and avoidance",
+          "Obsessions and compulsions"
+        ],
+        "expertPearls": [
+          "The 10 mg/day dose is often the key therapeutic dose; the US MDD fixed-dose study did not demonstrate additional benefit of 20 mg/day over 10 mg/day.",
+          "Start low in panic disorder because early activation/paradoxical anxiety can occur.",
+          "CYP2C19 is the major metabolic pathway; strong CYP2C19 inhibition can materially increase exposure.",
+          "Known CYP2C19 poor metabolizers have higher exposure and may warrant lower starting doses.",
+          "If significant akathisia/restlessness appears after initiation or dose escalation, do not assume it represents undertreated anxiety and simply increase the dose.",
+          "For OCD and chronic anxiety disorders, evaluate treatment over a disorder-appropriate timeframe rather than using the same response window as uncomplicated depression."
+        ]
+      },
+      "brands": [
+        {
+          "brandName": "Nexito 10 Tablet",
+          "manufacturer": "Sun Pharmaceutical Industries Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "15 tablets",
+          "price": 130,
+          "mrp": 144.22,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability and price are location/batch dependent"
+        },
+        {
+          "brandName": "Rexito 10 Tablet",
+          "manufacturer": "Regulus Pharmaceuticals",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 69.5,
+          "mrp": 77.16,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability and price are location/batch dependent"
+        },
+        {
+          "brandName": "Rexipra 10 Tablet",
+          "manufacturer": "Intas Pharmaceuticals Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 96.7,
+          "mrp": 96.81,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-10",
+          "availability": "Listed; availability and price are location/batch dependent"
+        },
+        {
+          "brandName": "Stalopam 10 Tablet",
+          "manufacturer": "Lupin Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 96.6,
+          "mrp": 96.65,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; availability and price are location/batch dependent"
+        },
+        {
+          "brandName": "Esopram 10mg Tablet",
+          "manufacturer": "Marc Laboratories Pvt Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 61.9,
+          "mrp": 70.31,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-08-29",
+          "availability": "Listed; availability and price are location dependent"
+        },
+        {
+          "brandName": "Lexipram 10mg Tablet",
+          "manufacturer": "Manufacturer not verified from retrieved listing",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 79.3,
+          "mrp": 88.03,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-08",
+          "availability": "Retrieved listing marked sold out; manufacturer not independently verified"
+        },
+        {
+          "brandName": "Esc 10 Tablet",
+          "manufacturer": "Rivera Pharma",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 40.4,
+          "mrp": 46.88,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-10",
+          "availability": "Retrieved listing marked sold out"
+        },
+        {
+          "brandName": "Exito 10mg Tablet",
+          "manufacturer": "Aareen Healthcare Pvt Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 66.7,
+          "mrp": 74.06,
+          "currency": "INR",
+          "priceType": "1mg listed price / MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-03",
+          "availability": "Listed; availability and price are location dependent"
+        },
+        {
+          "brandName": "Ciprex 10mg Tablet",
+          "manufacturer": "Theo Pharma Pvt Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": null,
+          "mrp": 82.5,
+          "currency": "INR",
+          "priceType": "1mg listed MRP",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-03",
+          "availability": "Retrieved listing marked sold out"
+        }
+      ],
+      "references": [
+        {
+          "id": "dailymed-escitalopram-2026",
+          "title": "Escitalopram tablets — Prescribing Information",
+          "type": "Regulatory prescribing information",
+          "organization": "DailyMed / U.S. National Library of Medicine",
+          "year": 2026,
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9ddd1f24-3ebd-4307-bb23-6acd742cd140",
+          "accessDate": "2026-09-15",
+          "notes": "Updated July 24, 2026; used for US indications, dosing, contraindications, warnings, adverse effects, interactions and pharmacokinetics."
+        },
+        {
+          "id": "emc-escitalopram-2026",
+          "title": "Escitalopram 10 mg film-coated tablets — Summary of Product Characteristics",
+          "type": "SmPC",
+          "organization": "electronic Medicines Compendium",
+          "year": 2026,
+          "url": "https://www.medicines.org.uk/emc/product/102179/smpc",
+          "accessDate": "2026-09-15",
+          "notes": "Updated May 28, 2026; used for UK indications, dosing, OCD/panic/social anxiety evidence, safety, interactions and pharmacokinetics."
+        },
+        {
+          "id": "nice-ng222-2026",
+          "title": "Depression in adults: treatment and management (NG222)",
+          "type": "Clinical guideline",
+          "organization": "NICE",
+          "year": 2022,
+          "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations",
+          "accessDate": "2026-09-15",
+          "notes": "Last reviewed January 30, 2026; used for antidepressant response, continuation, monitoring and switching principles."
+        },
+        {
+          "id": "nice-cg159",
+          "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+          "type": "Clinical guideline",
+          "organization": "NICE",
+          "year": 2013,
+          "url": "https://www.nice.org.uk/guidance/cg159/chapter/recommendations",
+          "accessDate": "2026-09-15",
+          "notes": "Used for SSRI selection, escitalopram/sertraline treatment and response strategy in adult social anxiety disorder."
+        },
+        {
+          "id": "nice-cg113",
+          "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+          "type": "Clinical guideline",
+          "organization": "NICE",
+          "year": 2011,
+          "url": "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations",
+          "accessDate": "2026-09-15",
+          "notes": "Last updated June 15, 2020; used for long-term pharmacological management of panic disorder and SSRI principles."
+        },
+        {
+          "id": "escitalopram-mdd-meta-2023",
+          "title": "Escitalopram versus other antidepressive agents for major depressive disorder: a systematic review and meta-analysis",
+          "type": "Systematic review and meta-analysis",
+          "organization": "PubMed / peer-reviewed literature",
+          "year": 2023,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38001423/",
+          "accessDate": "2026-09-15",
+          "notes": "Included 30 randomized trials comparing escitalopram with other antidepressants; used for comparative MDD evidence."
+        },
+        {
+          "id": "lactmed-escitalopram-2026",
+          "title": "Escitalopram — Drugs and Lactation Database (LactMed)",
+          "type": "Drug and lactation reference",
+          "organization": "National Library of Medicine / NCBI",
+          "year": 2026,
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK501275/",
+          "accessDate": "2026-09-15",
+          "notes": "Last revision August 15, 2026; used for breastmilk exposure, infant exposure and breastfeeding considerations."
+        },
+        {
+          "id": "mothertobaby-escitalopram-2024",
+          "title": "Citalopram | Escitalopram (Celexa | Lexapro) — Pregnancy Fact Sheet",
+          "type": "Teratology information reference",
+          "organization": "MotherToBaby",
+          "year": 2024,
+          "url": "https://mothertobaby.org/fact-sheets/citalopramescitalopram-celexalexapro-pregnancy/",
+          "accessDate": "2026-09-15",
+          "notes": "Used for pregnancy, congenital malformation, neonatal adaptation, PPHN and breastfeeding counseling."
+        },
+        {
+          "id": "escitalopram-neonatal-adaptation-2024",
+          "title": "Maternal treatment with selective serotonin reuptake inhibitors during pregnancy and delayed neonatal adaptation: a population-based cohort study",
+          "type": "Population-based cohort study",
+          "organization": "PubMed / BMJ",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38071585/",
+          "accessDate": "2026-09-15",
+          "notes": "Large cohort study of 280,090 term infants; used as supporting evidence for late-pregnancy SSRI exposure and neonatal adaptation."
+        },
+        {
+          "id": "1mg-nexito-2026",
+          "title": "Nexito 10 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/nexito-10-tablet-1097218",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; prices and availability are dynamic and location dependent."
+        },
+        {
+          "id": "1mg-rexito-2026",
+          "title": "Rexito 10 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Rexito-Tablet-535785",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; prices and availability are dynamic and location dependent."
+        },
+        {
+          "id": "1mg-rexipra-2026",
+          "title": "Rexipra 10 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Rexipra-Tablet-123216",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; prices and availability are dynamic and location dependent."
+        },
+        {
+          "id": "1mg-stalopam-2026",
+          "title": "Stalopam 10 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/10-mg-7954",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; prices and availability are dynamic and location dependent."
+        },
+        {
+          "id": "1mg-esopram-2026",
+          "title": "Esopram 10mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/esopram-10mg-tablet-291339",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved August 29, 2026; prices and availability are dynamic and location dependent."
+        },
+        {
+          "id": "1mg-lexipram-2026",
+          "title": "Lexipram 10mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/lexipram-10mg-tablet-547947",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; listing marked the product sold out; manufacturer not independently verified."
+        },
+        {
+          "id": "1mg-esc10-2026",
+          "title": "Esc 10 Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/Esc-Tablet-813381",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; listing marked the product sold out."
+        },
+        {
+          "id": "1mg-exito-2026",
+          "title": "Exito 10mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/exito-10mg-tablet-531942",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; prices and availability are dynamic and location dependent."
+        },
+        {
+          "id": "1mg-ciprex-2026",
+          "title": "Ciprex 10mg Tablet — product listing",
+          "type": "Indian medicine price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/ciprex-10mg-tablet-629412",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved September 2026; listing marked the product sold out."
+        }
+      ]
+    },
+    {
+      "id": "olanzapine",
+      "identity": {
+        "genericName": "Olanzapine",
+        "brandNames": [
+          "Zyprexa",
+          "Oleanz",
+          "Oliza",
+          "Olanz",
+          "Olanzapik",
+          "Olanzac",
+          "Olanex"
+        ],
+        "class": "Second-generation antipsychotic (SGA)",
+        "category": "Antipsychotic",
+        "nbn": {
+          "domain": "Dopaminergic / serotonergic",
+          "mechanism": "5-HT2A/D2 receptor antagonism with prominent H1, muscarinic and alpha-1 receptor antagonism"
+        },
+        "genericAvailable": true,
+        "habitForming": false
+      },
+      "regulatoryIndications": [
+        "Schizophrenia in adults; US labeling also establishes efficacy in adolescents aged 13–17.",
+        "Acute treatment of manic or mixed episodes associated with bipolar I disorder.",
+        "Maintenance treatment of bipolar I disorder in patients who have responded to olanzapine during an acute manic or mixed episode.",
+        "Olanzapine/fluoxetine combination is FDA-approved for depressive episodes associated with bipolar I disorder and treatment-resistant depression; this is a combination-product indication, not olanzapine monotherapy.",
+        "UK/European product information: schizophrenia, moderate-to-severe manic episode, and prevention of recurrence in bipolar disorder after response to olanzapine."
+      ],
+      "commonUses": [
+        "Schizophrenia-spectrum psychosis.",
+        "Acute mania or mixed episodes in bipolar I disorder.",
+        "Maintenance/relapse prevention in bipolar I disorder after acute response.",
+        "Selected agitation/behavioral dyscontrol associated with psychosis or mania where antipsychotic treatment is indicated.",
+        "Olanzapine/fluoxetine combination for bipolar depression or treatment-resistant depression where locally approved."
+      ],
+      "warnings": [
+        "Boxed warning: increased mortality in elderly patients with dementia-related psychosis; olanzapine is not approved for this use.",
+        "High metabolic risk: weight gain, hyperglycaemia/diabetes and dyslipidaemia.",
+        "Somnolence and cognitive/motor impairment; caution with driving, alcohol and CNS depressants.",
+        "Orthostatic hypotension, syncope and falls, especially during initiation/titration.",
+        "Tardive dyskinesia and other extrapyramidal symptoms can occur.",
+        "Neuroleptic malignant syndrome is rare but potentially fatal.",
+        "DRESS and serious cutaneous hypersensitivity reactions are rare but serious.",
+        "Anticholinergic effects may cause constipation, urinary retention and ileus.",
+        "Seizures can occur; use caution with seizure risk factors."
+      ],
+      "mechanism": {
+        "clinical": "Olanzapine antagonizes dopamine D2 and serotonin 5-HT2A receptors. Its broader H1, muscarinic and alpha-1 antagonism contributes to sedation, appetite/weight effects, anticholinergic effects and orthostatic hypotension.",
+        "inDepth": {
+          "receptors": [
+            "5-HT2A/2C and 5-HT6: high-affinity antagonism.",
+            "D1–D4: high-affinity dopamine receptor antagonism, including D2.",
+            "H1: high affinity; contributes to sedation and appetite/weight effects.",
+            "Alpha-1 adrenergic: high affinity; contributes to orthostatic hypotension.",
+            "5-HT3: moderate affinity antagonism.",
+            "Muscarinic M1–M5: moderate affinity antagonism; contributes to anticholinergic effects.",
+            "Low affinity for GABAA/benzodiazepine and beta-adrenergic receptors."
+          ],
+          "transporters": [
+            "Receptor antagonism is the principal pharmacodynamic mechanism; there is no clinically dominant monoamine-transporter inhibition required to explain its antipsychotic action."
+          ],
+          "affinity": [
+            "Ki approximately 4 nM at 5-HT2A, 11 nM at 5-HT2C and 5 nM at 5-HT6.",
+            "Ki approximately 11–31 nM at dopamine D1–D4 receptors.",
+            "Ki approximately 7 nM at H1 and 19 nM at alpha-1 receptors.",
+            "Ki approximately 57 nM at 5-HT3; muscarinic M1–M5 Ki approximately 32–132 nM depending on subtype."
+          ],
+          "potency": [
+            "High receptor affinity at 5-HT2A/2C, D1–D4, H1 and alpha-1 receptors.",
+            "Usual clinical dosing is 5–20 mg/day; doses above 10 mg/day were not shown to be consistently more efficacious than 10 mg/day in schizophrenia trials."
+          ],
+          "structureActivity": "A thienobenzodiazepine antipsychotic structurally related to clozapine. Its multi-receptor profile explains both broad efficacy and the characteristic sedation, appetite/weight gain and anticholinergic burden."
+        }
+      },
+      "evidence": [
+        {
+          "indication": "Schizophrenia",
+          "trialDose": "Typically 5–10 mg/day initially; efficacy demonstrated mainly across 10–15 mg/day, with individual dosing within 5–20 mg/day.",
+          "onset": "Improvement may begin in the first 1–2 weeks; fuller response is assessed over several weeks.",
+          "evidenceSummary": "US labeling cites two 6-week adult acute trials plus a maintenance trial. A major network meta-analysis found olanzapine among the more efficacious oral antipsychotics, with metabolic burden as an important trade-off.",
+          "rctCount": "2 key adult acute registration trials plus a maintenance trial; much larger comparative literature exists.",
+          "comparators": "Placebo and active antipsychotic comparators in the broader evidence base.",
+          "effectSize": "Network meta-analysis SMD versus placebo about 0.59 (95% CrI 0.53–0.65) for overall symptom change."
+        },
+        {
+          "indication": "Acute mania/mixed episode in bipolar I disorder",
+          "trialDose": "15 mg/day monotherapy; 10 mg/day when used in combination therapy in UK SmPC; US dosing generally starts within 10–15 mg/day depending context.",
+          "onset": "Improvement can emerge during the first week; acute trials generally lasted 3–4 weeks.",
+          "evidenceSummary": "US labeling cites two 3–4-week acute bipolar trials plus a maintenance trial. Olanzapine has established antimanic efficacy, balanced against sedation and metabolic effects.",
+          "rctCount": "2 key acute registration trials plus maintenance evidence.",
+          "comparators": "Placebo and active/combination treatment depending trial.",
+          "effectSize": "Not reduced to a single pooled effect because registration studies use different designs/endpoints."
+        },
+        {
+          "indication": "Maintenance of bipolar I disorder",
+          "trialDose": "Usually continue the effective acute-response dose; UK starting dose 10 mg/day, adjustable within 5–20 mg/day.",
+          "onset": "Long-term relapse-prevention outcome rather than an acute onset measure.",
+          "evidenceSummary": "Maintenance efficacy is established particularly in patients who responded during acute mania. Systematic-review evidence supports prevention of manic relapse, while prevention of all mood episodes is more nuanced.",
+          "rctCount": "Maintenance trials plus longer-term randomized evidence.",
+          "comparators": "Placebo and mood-stabilizer comparators in different studies.",
+          "effectSize": "Systematic review found benefit for prevention of manic relapse but less clear benefit for composite relapse into any mood episode."
+        },
+        {
+          "indication": "Bipolar depression / treatment-resistant depression with olanzapine-fluoxetine combination",
+          "trialDose": "Follow the combination-product label; do not extrapolate olanzapine-monotherapy dosing to the combination indication.",
+          "onset": "Assessed over several weeks.",
+          "evidenceSummary": "FDA labeling supports olanzapine/fluoxetine for bipolar I depressive episodes and treatment-resistant depression. This is not evidence for olanzapine monotherapy as an antidepressant indication.",
+          "rctCount": "Multiple controlled trials underpin the combination indications.",
+          "comparators": "Placebo and antidepressant/control conditions depending indication.",
+          "effectSize": "No single pooled estimate entered because the combination has indication-specific trials."
+        }
+      ],
+      "dosing": {
+        "indications": [
+          {
+            "indication": "Schizophrenia – adults",
+            "startingDose": "5–10 mg once daily",
+            "targetDose": "10 mg/day",
+            "maximumDose": "20 mg/day",
+            "titration": "Adjust in 5 mg increments/decrements after reassessment; US label advises generally no shorter than 1-week intervals because steady state takes about 1 week.",
+            "notes": "10 mg/day is the usual adult starting/target dose; 5 mg may be preferable when slower metabolism or increased sensitivity is expected."
+          },
+          {
+            "indication": "Bipolar I mania/mixed episode – monotherapy",
+            "startingDose": "10–15 mg once daily",
+            "targetDose": "10–15 mg/day",
+            "maximumDose": "20 mg/day",
+            "titration": "Adjust according to response and tolerability.",
+            "notes": "UK SmPC specifies 15 mg/day as monotherapy starting dose."
+          },
+          {
+            "indication": "Bipolar I mania/mixed episode – combination therapy",
+            "startingDose": "10 mg once daily",
+            "targetDose": "10 mg/day initially",
+            "maximumDose": "20 mg/day",
+            "titration": "Individualize with the concomitant mood stabilizer.",
+            "notes": "UK SmPC specifies 10 mg/day when used in combination."
+          },
+          {
+            "indication": "Bipolar I maintenance after response",
+            "startingDose": "10 mg/day",
+            "targetDose": "Effective acute-response dose",
+            "maximumDose": "20 mg/day",
+            "titration": "Optimize according to relapse prevention, adverse effects and metabolic burden.",
+            "notes": "Continue the effective acute dose when tolerated; reassess long-term benefit periodically."
+          },
+          {
+            "indication": "Adolescent schizophrenia/bipolar I mania (US)",
+            "startingDose": "Lower initial dosing may be appropriate; follow local pediatric label.",
+            "targetDose": "Often 10 mg/day",
+            "maximumDose": "20 mg/day",
+            "titration": "Gradual titration with close metabolic and neurologic monitoring.",
+            "notes": "US labeling establishes efficacy but emphasizes greater weight gain and dyslipidaemia risk in adolescents."
+          }
+        ],
+        "dosageForms": [
+          "Immediate-release oral tablets: 2.5, 5, 7.5, 10, 15 and 20 mg in US labeling.",
+          "Orally disintegrating tablets are available in some markets/brands.",
+          "Intramuscular olanzapine is a separate formulation used for acute agitation in jurisdictions where approved; do not substitute IM and oral regimens."
+        ],
+        "administrationTips": [
+          "Once daily; food does not materially affect absorption.",
+          "Evening dosing is often practical when sedation occurs, but timing should be individualized.",
+          "Warn about driving impairment and additive CNS depression with alcohol/sedatives.",
+          "Record baseline weight/BMI, blood pressure, glucose/HbA1c and lipids; repeat metabolic monitoring during treatment.",
+          "Assess constipation and bowel function, especially with other anticholinergic medicines."
+        ],
+        "renalAdjustment": "No routine adjustment for renal impairment; only about 7% is excreted unchanged in urine and dialysis does not meaningfully remove olanzapine.",
+        "hepaticAdjustment": "No routine adjustment solely for mild/moderate hepatic impairment, but use clinical caution. Consider lower starting doses when other factors slow clearance or increase sensitivity."
+      },
+      "trajectory": {
+        "ifWorks": {
+          "responseDefinition": "Meaningful reduction in psychotic/manic symptoms with improved functioning and tolerability; sedation alone is not response.",
+          "remissionGoal": "Sustained symptomatic control/remission with functional recovery while minimizing metabolic, neurologic and sedative burden.",
+          "continuationDuration": "Continue through acute and continuation phases; schizophrenia commonly requires long-term maintenance. Bipolar maintenance depends on relapse risk and response.",
+          "maintenance": "Use the lowest effective dose that maintains stability, with periodic reassessment of benefit and adverse effects."
+        },
+        "ifFails": {
+          "nonResponseDefinition": "Insufficient improvement after an adequate therapeutic trial with verified adherence, appropriate dose/exposure, sufficient duration and diagnostic reassessment.",
+          "assessmentTime": "Review response over the first several weeks; avoid judging efficacy from early sedation or sleep improvement alone.",
+          "escalation": "Verify diagnosis, adherence, substance use, smoking status, interactions and tolerability before optimizing dose within the licensed range.",
+          "switchingTriggers": "Persistent inadequate response despite an adequate trial, intolerable metabolic/sedative/neurologic effects, contraindication or patient preference."
+        },
+        "augmentation": [
+          "Avoid routine antipsychotic polypharmacy for partial response. In treatment-resistant schizophrenia, reassess whether clozapine criteria are met.",
+          "For bipolar depression or treatment-resistant depression, distinguish olanzapine monotherapy from the evidence-based olanzapine/fluoxetine combination."
+        ]
+      },
+      "safety": {
+        "criticalWarnings": [
+          "Increased mortality in elderly patients with dementia-related psychosis; not approved for this indication.",
+          "High metabolic risk: rapid weight gain, hyperglycaemia/diabetes and dyslipidaemia.",
+          "Neuroleptic malignant syndrome is a medical emergency.",
+          "Tardive dyskinesia may be persistent; assess involuntary movements periodically.",
+          "DRESS/severe hypersensitivity requires prompt evaluation and discontinuation when suspected.",
+          "Severe constipation/ileus can occur, especially with anticholinergic co-medications."
+        ],
+        "common": [
+          "Somnolence/sedation",
+          "Weight gain",
+          "Increased appetite",
+          "Dry mouth",
+          "Constipation",
+          "Dizziness",
+          "Asthenia/fatigue",
+          "Increased glucose",
+          "Increased triglycerides/cholesterol",
+          "Orthostatic effects",
+          "Akathisia/EPS"
+        ],
+        "uncommon": [
+          "Peripheral oedema",
+          "Tachycardia",
+          "Postural hypotension/syncope",
+          "Elevated liver enzymes",
+          "Prolactin elevation/sexual dysfunction",
+          "Urinary retention",
+          "Seizure",
+          "QT prolongation/arrhythmia",
+          "Pancreatitis",
+          "Dyskinesia"
+        ],
+        "rare": [
+          "Neuroleptic malignant syndrome",
+          "Tardive dyskinesia",
+          "DRESS",
+          "Severe neutropenia",
+          "Severe cutaneous reactions",
+          "Diabetic ketoacidosis/hyperosmolar state",
+          "Rhabdomyolysis",
+          "Severe ileus"
+        ],
+        "lifeThreatening": [
+          "NMS",
+          "Severe hyperglycaemia/DKA or hyperosmolar state",
+          "Severe hypersensitivity/DRESS",
+          "Severe ileus/intestinal obstruction",
+          "Serious aspiration/respiratory complications in vulnerable patients",
+          "Seizure or serious arrhythmia in susceptible patients"
+        ],
+        "quickProfile": {
+          "weightGain": "High",
+          "sedation": "High",
+          "sexualDysfunction": "Low–moderate; may occur",
+          "qtRisk": "Low–moderate; generally less prominent than high-risk QT antipsychotics",
+          "metabolicRisk": "High"
+        },
+        "management": [
+          "Metabolic effects: baseline risk assessment, lifestyle intervention and serial weight/glucose/HbA1c/lipid monitoring; consider switching if deterioration is clinically significant.",
+          "Sedation: review timing, dose and other CNS depressants; caution with driving.",
+          "Constipation: proactive bowel management in high-risk patients; urgently assess severe abdominal pain/distension or absent bowel movements.",
+          "Orthostasis: slow titration, hydration and review hypotensive co-medications.",
+          "Akathisia/EPS: assess systematically; consider dose reduction or targeted treatment rather than reflexive dose escalation.",
+          "Hyperglycaemia/dyslipidaemia: manage according to standard metabolic care and reassess antipsychotic choice when severe."
+        ]
+      },
+      "pharmacokinetics": {
+        "halfLife": "Approximately 21–54 hours; mean about 30 hours.",
+        "steadyState": "Approximately 1 week with once-daily dosing.",
+        "bioavailability": "Well absorbed; approximately 40% undergoes first-pass metabolism. Food does not materially affect absorption.",
+        "proteinBinding": "Approximately 93%.",
+        "metabolism": "Extensive hepatic metabolism by direct glucuronidation and CYP oxidation; CYP1A2 is important and CYP2D6 is a minor in-vivo pathway. Smoking increases clearance.",
+        "elimination": "Approximately 57% recovered in urine and 30% in feces after radiolabeled dosing; about 7% recovered unchanged in urine."
+      },
+      "interactions": [
+        {
+          "drug": "Smoking / tobacco smoke",
+          "effect": "CYP1A2 induction increases olanzapine clearance and may lower exposure; stopping smoking can increase exposure.",
+          "management": "Document smoking status and reassess response/adverse effects after major changes in smoking. Dose adjustment may be required."
+        },
+        {
+          "drug": "Fluvoxamine",
+          "effect": "CYP1A2 inhibition can substantially increase olanzapine exposure.",
+          "management": "Consider a lower olanzapine dose and monitor sedation/adverse effects closely."
+        },
+        {
+          "drug": "Carbamazepine",
+          "effect": "CYP1A2 induction can increase olanzapine clearance and lower concentrations.",
+          "management": "Monitor clinical response; dose adjustment may be required."
+        },
+        {
+          "drug": "Alcohol / CNS depressants",
+          "effect": "Additive sedation and psychomotor impairment.",
+          "management": "Avoid/minimize alcohol and review sedative co-medications."
+        },
+        {
+          "drug": "Anticholinergic drugs",
+          "effect": "Additive constipation, urinary retention, cognitive effects and ileus risk.",
+          "management": "Use cautiously, particularly in older/frail patients; monitor bowel and urinary function."
+        },
+        {
+          "drug": "Antihypertensives",
+          "effect": "Additive hypotension/orthostasis may occur.",
+          "management": "Monitor blood pressure and symptoms during initiation/titration."
+        },
+        {
+          "drug": "Dopamine agonists",
+          "effect": "Dopamine receptor antagonism may reduce the effects of dopamine agonists.",
+          "management": "Avoid where possible or use specialist oversight."
+        }
+      ],
+      "specialPopulations": {
+        "elderly": {
+          "recommendation": "Use lower initial doses and slow titration when frailty, hypotension risk or slower metabolism increases sensitivity. Avoid dementia-related psychosis use.",
+          "doseAdjustment": "5 mg/day is a reasonable lower starting dose in selected older/frail patients.",
+          "monitoring": "Falls, orthostasis, sedation, cognition, bowel function and metabolic parameters."
+        },
+        "childrenAdolescents": {
+          "recommendation": "US labeling establishes efficacy for schizophrenia and bipolar I mania/mixed episodes in adolescents; metabolic and weight risks are particularly important.",
+          "doseAdjustment": "Use indication-specific pediatric dosing and gradual titration according to the local label.",
+          "monitoring": "Weight/BMI, growth, glucose/HbA1c, lipids, EPS, prolactin and sedation."
+        },
+        "pregnancy": {
+          "recommendation": "Do not stop effective treatment abruptly solely because of pregnancy; balance relapse risk against maternal/fetal/neonatal risks.",
+          "evidence": "Available observational data have not established a major teratogenic signal, but evidence is less robust than for some other psychotropics.",
+          "considerations": "Monitor maternal weight/glucose and obstetric risk. Neonatal adaptation/EPS symptoms may occur after exposure near delivery."
+        },
+        "breastfeeding": {
+          "recommendation": "Breastfeeding is generally possible when olanzapine is clinically required, with infant monitoring.",
+          "evidence": "LactMed 2026 reports low milk levels with maternal doses up to 20 mg/day and generally undetectable infant serum levels; olanzapine is considered an acceptable/first-line SGA during breastfeeding in several reviews.",
+          "considerations": "Monitor infant for drowsiness, irritability, poor feeding, tremor, abnormal movements and growth/development."
+        },
+        "renal": {
+          "recommendation": "Renal impairment alone usually does not require adjustment.",
+          "doseAdjustment": "None routinely required.",
+          "monitoring": "Usual clinical monitoring; consider frailty/polypharmacy."
+        },
+        "hepatic": {
+          "recommendation": "Use clinical caution in hepatic disease; mild/moderate impairment has relatively little documented PK effect.",
+          "doseAdjustment": "No routine adjustment solely for mild/moderate impairment; consider lower starting dose when other sensitivity factors coexist.",
+          "monitoring": "Liver enzymes when clinically indicated and metabolic parameters."
+        },
+        "cardiac": {
+          "recommendation": "Use caution with significant cardiovascular disease, orthostatic hypotension or arrhythmia risk.",
+          "doseAdjustment": "No routine cardiac-specific adjustment.",
+          "monitoring": "Blood pressure/orthostasis; ECG when clinical risk factors or QT-prolonging drugs warrant."
+        }
+      },
+      "contraindications": [
+        "Known hypersensitivity to olanzapine or formulation components.",
+        "Use for dementia-related psychosis is not approved and carries increased mortality risk; it should not be used for this indication."
+      ],
+      "stoppingSwitching": {
+        "taper": {
+          "protocol": "Avoid abrupt discontinuation when clinically feasible. Gradually reduce dose, individualizing pace to duration, dose, relapse risk and withdrawal symptoms.",
+          "withdrawalSymptoms": [
+            "Insomnia",
+            "Anxiety/agitation",
+            "Nausea",
+            "Sweating",
+            "Headache",
+            "Restlessness/akathisia-like symptoms",
+            "Return or rebound of psychotic or mood symptoms"
+          ]
+        },
+        "switching": [
+          "Individualize switching according to diagnosis, relapse risk, half-life, adverse effects and destination drug.",
+          "Cross-titration is often used between antipsychotics, but the exact schedule depends on the destination drug.",
+          "When switching because of severe metabolic effects, choose a lower-metabolic-burden alternative while maintaining adequate antipsychotic coverage.",
+          "Reassess exposure after major smoking-status changes."
+        ],
+        "overdose": {
+          "toxicity": "CNS depression, agitation/delirium, tachycardia, hypertension/hypotension, anticholinergic toxicity, dysarthria, EPS, seizures and potentially coma/cardiopulmonary compromise.",
+          "signs": [
+            "Sedation/coma",
+            "Agitation/delirium",
+            "Tachycardia",
+            "Hypotension/hypertension",
+            "Respiratory depression",
+            "Seizures",
+            "Arrhythmia",
+            "Anticholinergic signs"
+          ],
+          "management": "Emergency supportive care with airway/respiratory and cardiovascular monitoring and ECG. No specific antidote; activated charcoal may be considered early in selected cases with appropriate airway protection. Contact toxicology/poison centre."
+        }
+      },
+      "clinicalPearls": {
+        "advantages": [
+          "Strong antipsychotic efficacy in schizophrenia and acute mania.",
+          "Evidence-supported maintenance option in schizophrenia and bipolar disorder after response.",
+          "Relatively low prolactin liability compared with several potent D2-blocking antipsychotics.",
+          "Lower EPS burden than high-potency first-generation antipsychotics at usual doses.",
+          "Once-daily dosing and food-independent absorption."
+        ],
+        "disadvantages": [
+          "High risk of weight gain and metabolic syndrome.",
+          "Sedation and increased appetite are common.",
+          "Clinically important anticholinergic burden.",
+          "Smoking substantially increases clearance.",
+          "Depot/long-acting olanzapine formulations, where available, have distinct post-injection monitoring requirements and are not a simple substitute for oral dosing."
+        ],
+        "patientSelection": [
+          "Useful when robust antipsychotic/antimanic efficacy is prioritized and metabolic risk can be actively monitored.",
+          "Consider lower-metabolic-risk alternatives in patients with severe obesity, diabetes or rapidly worsening metabolic parameters unless olanzapine-specific efficacy is especially valuable.",
+          "Can be attractive when prolactin elevation is a concern relative to prolactin-raising alternatives."
+        ],
+        "primaryTargetSymptoms": [
+          "Positive psychotic symptoms: delusions, hallucinations and thought disorder.",
+          "Mania/mixed symptoms: elevated/irritable mood, overactivity, reduced need for sleep and associated psychosis.",
+          "Agitation may improve, but sedation should not be mistaken for antipsychotic response."
+        ],
+        "expertPearls": [
+          "Early sleep/sedation is not equivalent to full antipsychotic response.",
+          "Do not escalate dose solely because sedation is absent; assess psychosis/mania longitudinally.",
+          "Weight gain can begin early; prevention and early intervention matter.",
+          "Ask specifically about tobacco smoking because changes can materially alter olanzapine exposure.",
+          "Severe or progressive constipation should prompt consideration of ileus rather than being treated as a minor adverse effect."
+        ]
+      },
+      "brands": [
+        {
+          "brandName": "Oleanz 10",
+          "manufacturer": "Sun Pharmaceutical Industries Ltd",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 108,
+          "mrp": 120,
+          "currency": "INR",
+          "priceType": "Retail listing",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-10",
+          "availability": "Listed; location-dependent price."
+        },
+        {
+          "brandName": "Olanz 10",
+          "manufacturer": "Not verified from retrieved listing",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 40.5,
+          "mrp": 45,
+          "currency": "INR",
+          "priceType": "Retail listing",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-08",
+          "availability": "Sold out at retrieved location."
+        },
+        {
+          "brandName": "Olanzapik 10",
+          "manufacturer": "Not verified from retrieved listing",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 63.3,
+          "mrp": 70.31,
+          "currency": "INR",
+          "priceType": "Retail listing",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-08-16",
+          "availability": "Sold out at retrieved location."
+        },
+        {
+          "brandName": "Olanzap 10",
+          "manufacturer": "Not verified from retrieved listing",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 51.5,
+          "mrp": 57.19,
+          "currency": "INR",
+          "priceType": "Retail listing",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-08-16",
+          "availability": "Sold out at retrieved location."
+        },
+        {
+          "brandName": "Olanzac 10",
+          "manufacturer": "Not verified from retrieved listing",
+          "strength": "10 mg",
+          "dosageForm": "Tablet",
+          "packSize": "10 tablets",
+          "price": 55.1,
+          "mrp": 64,
+          "currency": "INR",
+          "priceType": "Retail listing",
+          "source": "Tata 1mg",
+          "lastUpdated": "2026-09-11",
+          "availability": "Listed; location-dependent price."
+        }
+      ],
+      "references": [
+        {
+          "id": "olz-dailymed-2026",
+          "title": "Olanzapine Tablets – Full Prescribing Information",
+          "type": "Regulatory label",
+          "organization": "U.S. FDA / DailyMed",
+          "year": 2026,
+          "url": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=709d79a1-2742-4629-af43-161be166833a",
+          "accessDate": "2026-09-15",
+          "notes": "Updated 2026; indications, dosing, boxed warning, adverse effects, interactions and PK."
+        },
+        {
+          "id": "olz-emc-2026",
+          "title": "Zyprexa – Summary of Product Characteristics",
+          "type": "Regulatory SmPC",
+          "organization": "electronic Medicines Compendium",
+          "year": 2026,
+          "url": "https://www.medicines.org.uk/emc/product/3097/smpc",
+          "accessDate": "2026-09-15",
+          "notes": "UK indications, dosing, special populations and discontinuation."
+        },
+        {
+          "id": "olz-schiz-meta",
+          "title": "Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia",
+          "type": "Network meta-analysis",
+          "organization": "Lancet / PubMed",
+          "year": 2013,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23810019",
+          "accessDate": "2026-09-15",
+          "notes": "212 trials; olanzapine SMD versus placebo 0.59 (95% CrI 0.53–0.65)."
+        },
+        {
+          "id": "olz-relapse",
+          "title": "Oral and long-acting antipsychotics for relapse prevention in schizophrenia-spectrum disorders",
+          "type": "Network meta-analysis",
+          "organization": "PubMed",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35524620/",
+          "accessDate": "2026-09-15",
+          "notes": "92 randomized trials, 22,645 participants; high confidence for oral olanzapine versus placebo in relapse prevention."
+        },
+        {
+          "id": "olz-bipolar",
+          "title": "Olanzapine in the long-term treatment of bipolar disorder: systematic review and meta-analysis",
+          "type": "Systematic review/meta-analysis",
+          "organization": "PubMed",
+          "year": 2009,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19828571/",
+          "accessDate": "2026-09-15",
+          "notes": "Evidence strongest for prevention of manic relapse in responders; composite relapse benefit less clear."
+        },
+        {
+          "id": "olz-lactmed",
+          "title": "Olanzapine – Drugs and Lactation Database (LactMed)",
+          "type": "Lactation reference",
+          "organization": "NCBI",
+          "year": 2026,
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK501056/",
+          "accessDate": "2026-09-15",
+          "notes": "Low milk levels up to 20 mg/day; infant monitoring recommendations."
+        },
+        {
+          "id": "olz-preg",
+          "title": "Olanzapine in pregnancy and breastfeeding: review of global safety surveillance",
+          "type": "Pregnancy/lactation review",
+          "organization": "PubMed",
+          "year": 2013,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23902726/",
+          "accessDate": "2026-09-15",
+          "notes": "Global safety surveillance review."
+        },
+        {
+          "id": "olz-1mg-oleanz",
+          "title": "Oleanz 10 Tablet",
+          "type": "Indian retail price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/OLEANZ-10-MG-TABLET-23642",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved 10 Sep 2026; price/location dependent."
+        },
+        {
+          "id": "olz-1mg-olanz",
+          "title": "Olanz 10mg Tablet",
+          "type": "Indian retail price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/olanz-10mg-tablet-438430",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved 8 Sep 2026; sold out at retrieved location."
+        },
+        {
+          "id": "olz-1mg-olanzapik",
+          "title": "Olanzapik 10mg Tablet",
+          "type": "Indian retail price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/olanzapik-10mg-tablet-295519",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved Aug 2026; sold out at retrieved location."
+        },
+        {
+          "id": "olz-1mg-olanzap",
+          "title": "Olanzap 10mg Tablet",
+          "type": "Indian retail price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/olanzap-10mg-tablet-688942",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved Aug 2026; location-dependent."
+        },
+        {
+          "id": "olz-1mg-olanzac",
+          "title": "Olanzac 10mg Tablet",
+          "type": "Indian retail price listing",
+          "organization": "Tata 1mg",
+          "year": 2026,
+          "url": "https://www.1mg.com/drugs/olanzac-10mg-tablet-824611",
+          "accessDate": "2026-09-15",
+          "notes": "Retrieved 11 Sep 2026; location-dependent."
+        }
+      ]
+    }
+  ]
+}
