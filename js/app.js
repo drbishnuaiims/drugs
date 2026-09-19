@@ -1,704 +1,1414 @@
 /* =========================================================
-   PSYCHOPHARM REFERENCE
-   Homepage Application
-   ========================================================= */
-
-"use strict";
-
-
-/* =========================================================
-   1. CONFIGURATION
-   ========================================================= */
-
-const DATA_URL = "data/drugs.json";
-const HEADER_URL = "components/header.html";
-const FOOTER_URL = "components/footer.html";
+   THOMSON CLINIC
+   DRUG PRICE INTELLIGENCE
+   MODULE 4 — PRICE INTELLIGENCE UI
+========================================================= */
 
 
 /* =========================================================
-   2. DOM ELEMENTS
-   ========================================================= */
+   DOM
+========================================================= */
 
-const headerContainer = document.getElementById("site-header");
-const footerContainer = document.getElementById("site-footer");
+const searchInput =
+    document.getElementById("drugSearch");
 
-const drugGrid = document.getElementById("drug-grid");
-const drugSearch = document.getElementById("drug-search");
-const clearSearchButton = document.getElementById("clear-search");
+const autocomplete =
+    document.getElementById("autocomplete");
 
-const drugCount = document.getElementById("drug-count");
-const drugLoading = document.getElementById("drug-loading");
-const drugError = document.getElementById("drug-error");
-const drugEmpty = document.getElementById("drug-empty");
+const emptyState =
+    document.getElementById("emptyState");
 
+const drugSection =
+    document.getElementById("drugSection");
 
-/* =========================================================
-   3. APPLICATION STATE
-   ========================================================= */
+const drugTitle =
+    document.getElementById("drugTitle");
 
-let allDrugs = [];
-let currentSearch = "";
+const drugSubtitle =
+    document.getElementById("drugSubtitle");
 
+const drugTags =
+    document.getElementById("drugTags");
 
-/* =========================================================
-   4. INITIALIZATION
-   ========================================================= */
+const summaryGrid =
+    document.getElementById("summaryGrid");
 
-document.addEventListener("DOMContentLoaded", init);
+const brandTable =
+    document.getElementById("brandTable");
 
-
-async function init() {
-
-    setupSearch();
-
-    await Promise.all([
-        loadHeader(),
-        loadFooter()
-    ]);
-
-    await loadDrugDatabase();
-}
+const brandCount =
+    document.getElementById("brandCount");
 
 
 /* =========================================================
-   5. SHARED COMPONENTS
-   ========================================================= */
+   STATE
+========================================================= */
 
-async function loadHeader() {
-
-    if (!headerContainer) {
-        return;
-    }
-
-    try {
-
-        const response = await fetch(HEADER_URL);
-
-        if (!response.ok) {
-            throw new Error(
-                `Header request failed: ${response.status}`
-            );
-        }
-
-        headerContainer.innerHTML = await response.text();
-
-    } catch (error) {
-
-        console.error("Unable to load header:", error);
-
-        /*
-         * The page remains usable even if the shared
-         * header cannot be loaded.
-         */
-        headerContainer.innerHTML = "";
-
-    }
-}
-
-
-async function loadFooter() {
-
-    if (!footerContainer) {
-        return;
-    }
-
-    try {
-
-        const response = await fetch(FOOTER_URL);
-
-        if (!response.ok) {
-            throw new Error(
-                `Footer request failed: ${response.status}`
-            );
-        }
-
-        footerContainer.innerHTML = await response.text();
-
-    } catch (error) {
-
-        console.error("Unable to load footer:", error);
-
-        footerContainer.innerHTML = "";
-
-    }
-}
+let currentDrug = null;
+let currentFormulation = null;
 
 
 /* =========================================================
-   6. LOAD DRUG DATABASE
-   ========================================================= */
+   INITIALIZATION
+========================================================= */
 
-async function loadDrugDatabase() {
+async function initializeApp() {
 
-    showLoading();
+    const database =
+        await DrugDatabase.load();
 
-    try {
-
-        const response = await fetch(DATA_URL);
-
-        if (!response.ok) {
-            throw new Error(
-                `Drug database request failed: ${response.status}`
-            );
-        }
-
-        const database = await response.json();
-
-        if (
-            !database ||
-            !Array.isArray(database.drugs)
-        ) {
-            throw new Error(
-                "Invalid drug database format."
-            );
-        }
-
-        allDrugs = database.drugs;
-
-        renderDrugs(allDrugs);
-
-    } catch (error) {
-
-        console.error(
-            "Unable to load drug database:",
-            error
-        );
+    if (!database) {
 
         showDatabaseError();
 
+        return;
     }
+
+    console.log(
+        `Loaded ${database.drugs.length} medicines`
+    );
+
 }
 
 
 /* =========================================================
-   7. SEARCH SETUP
-   ========================================================= */
+   SEARCH
+========================================================= */
 
-function setupSearch() {
+searchInput.addEventListener(
+    "input",
+    function () {
 
-    if (!drugSearch) {
-        return;
-    }
+        const query =
+            this.value.trim();
 
-    drugSearch.addEventListener(
-        "input",
-        handleSearch
-    );
+        if (!query) {
 
+            autocomplete.classList.remove(
+                "active"
+            );
 
-    if (clearSearchButton) {
+            return;
+        }
 
-        clearSearchButton.addEventListener(
-            "click",
-            clearSearch
+        const results =
+            DrugDatabase.search(
+                query
+            );
+
+        renderSuggestions(
+            results
         );
 
     }
-
-}
-
-
-/* =========================================================
-   8. SEARCH HANDLER
-   ========================================================= */
-
-function handleSearch(event) {
-
-    currentSearch = event.target.value
-        .trim()
-        .toLowerCase();
-
-    updateClearButton();
-
-    const filteredDrugs = filterDrugs(
-        allDrugs,
-        currentSearch
-    );
-
-    renderDrugs(filteredDrugs);
-}
+);
 
 
 /* =========================================================
-   9. FILTER DRUGS
-   ========================================================= */
+   SEARCH SUGGESTIONS
+========================================================= */
 
-function filterDrugs(drugs, searchTerm) {
+function renderSuggestions(results) {
 
-    if (!searchTerm) {
-        return drugs;
-    }
+    autocomplete.innerHTML = "";
 
-    return drugs.filter((drug) => {
+    if (!results.length) {
 
-        const searchableText =
-            buildSearchText(drug);
+        autocomplete.innerHTML = `
 
-        return searchableText.includes(
-            searchTerm
-        );
+            <div class="suggestion">
 
-    });
-}
+                <div>
 
-
-/* =========================================================
-   10. BUILD SEARCHABLE TEXT
-   ========================================================= */
-
-function buildSearchText(drug) {
-
-    const identity = drug?.identity || {};
-    const nbn = identity?.nbn || {};
-
-    const brandNames = Array.isArray(
-        identity.brandNames
-    )
-        ? identity.brandNames
-        : [];
-
-    const regulatoryIndications =
-        Array.isArray(drug?.regulatoryIndications)
-            ? drug.regulatoryIndications
-            : [];
-
-    const commonUses =
-        Array.isArray(drug?.commonUses)
-            ? drug.commonUses
-            : [];
-
-    return [
-        identity.genericName,
-        identity.class,
-        identity.category,
-        nbn.domain,
-        nbn.mechanism,
-
-        ...brandNames,
-
-        ...regulatoryIndications,
-        ...commonUses
-    ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-}
-
-
-/* =========================================================
-   11. RENDER DRUGS
-   ========================================================= */
-
-function renderDrugs(drugs) {
-
-    if (!drugGrid) {
-        return;
-    }
-
-    hideLoading();
-    hideDatabaseError();
-
-    drugGrid.innerHTML = "";
-
-    updateDrugCount(drugs.length);
-
-
-    if (!drugs.length) {
-
-        drugEmpty.hidden = false;
-
-        return;
-    }
-
-
-    drugEmpty.hidden = true;
-
-
-    const fragment =
-        document.createDocumentFragment();
-
-
-    drugs.forEach((drug) => {
-
-        const card =
-            createDrugCard(drug);
-
-        fragment.appendChild(card);
-
-    });
-
-
-    drugGrid.appendChild(fragment);
-}
-
-
-/* =========================================================
-   12. CREATE DRUG CARD
-   ========================================================= */
-
-function createDrugCard(drug) {
-
-    const card =
-        document.createElement("article");
-
-    card.className = "drug-card";
-
-    card.tabIndex = 0;
-
-    const identity =
-        drug?.identity || {};
-
-    const nbn =
-        identity?.nbn || {};
-
-
-    const genericName =
-        identity.genericName ||
-        drug?.id ||
-        "Unnamed medication";
-
-
-    const category =
-        identity.category ||
-        "";
-
-
-    const drugClass =
-        identity.class ||
-        "";
-
-
-    const mechanism =
-        nbn.mechanism ||
-        "";
-
-
-    const indications =
-        Array.isArray(drug?.regulatoryIndications)
-            ? drug.regulatoryIndications
-            : [];
-
-
-    const commonUses =
-        Array.isArray(drug?.commonUses)
-            ? drug.commonUses
-            : [];
-
-
-    const allIndications = [
-        ...indications,
-        ...commonUses
-    ];
-
-
-    card.innerHTML = `
-        <div class="drug-card-top">
-
-            <h3 class="drug-card-name">
-                ${escapeHTML(genericName)}
-            </h3>
-
-            ${
-                category
-                    ? `
-                        <span class="drug-card-category">
-                            ${escapeHTML(category)}
-                        </span>
-                    `
-                    : ""
-            }
-
-        </div>
-
-
-        ${
-            drugClass
-                ? `
-                    <p class="drug-card-class">
-                        ${escapeHTML(drugClass)}
-                    </p>
-                `
-                : ""
-        }
-
-
-        ${
-            mechanism
-                ? `
-                    <p class="drug-card-mechanism">
-                        ${escapeHTML(mechanism)}
-                    </p>
-                `
-                : ""
-        }
-
-
-        ${
-            allIndications.length
-                ? `
-                    <div class="drug-card-indications">
-                        ${renderIndicationTags(
-                            allIndications
-                        )}
+                    <div class="suggestion-name">
+                        No matching medicine
                     </div>
-                `
-                : ""
+
+                    <div class="suggestion-meta">
+                        Try generic name,
+                        brand name or strength.
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+        autocomplete.classList.add(
+            "active"
+        );
+
+        return;
+    }
+
+
+    results.forEach(
+        drug => {
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+            item.className =
+                "suggestion";
+
+
+            const strengths =
+                [
+                    ...new Set(
+                        drug.formulations.map(
+                            f =>
+                                f.strength
+                        )
+                    )
+                ].join(", ");
+
+
+            item.innerHTML = `
+
+                <div>
+
+                    <div class="suggestion-name">
+                        ${drug.genericName}
+                    </div>
+
+                    <div class="suggestion-meta">
+                        ${drug.therapeuticClass}
+                        · ${strengths}
+                    </div>
+
+                </div>
+
+                <div class="suggestion-type">
+                    DRUG
+                </div>
+
+            `;
+
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    selectDrug(drug);
+
+                }
+            );
+
+
+            autocomplete.appendChild(
+                item
+            );
+
         }
+    );
 
 
-        <div class="drug-card-badges">
-
-            ${
-                identity.genericAvailable === true
-                    ? `
-                        <span class="card-badge card-badge-generic">
-                            Generic available
-                        </span>
-                    `
-                    : ""
-            }
+    autocomplete.classList.add(
+        "active"
+    );
+}
 
 
-            ${
-                identity.habitForming === true
-                    ? `
-                        <span class="card-badge card-badge-warning">
-                            Habit-forming
-                        </span>
-                    `
-                    : `
-                        <span class="card-badge card-badge-habit">
-                            Not habit-forming
-                        </span>
-                    `
-            }
+/* =========================================================
+   SELECT DRUG
+========================================================= */
 
-        </div>
+function selectDrug(drug) {
+
+    currentDrug =
+        drug;
+
+    searchInput.value =
+        drug.genericName;
+
+    autocomplete.classList.remove(
+        "active"
+    );
+
+    emptyState.style.display =
+        "none";
+
+    drugSection.classList.add(
+        "visible"
+    );
+
+    renderDrug(
+        drug
+    );
+
+    window.scrollTo({
+
+        top:
+            document.querySelector(
+                ".main"
+            ).offsetTop - 80,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
 
 
-        <span
-            class="drug-card-arrow"
-            aria-hidden="true"
-        >
-            →
+/* =========================================================
+   RENDER DRUG
+========================================================= */
+
+function renderDrug(drug) {
+
+    drugTitle.textContent =
+        drug.genericName;
+
+    drugSubtitle.textContent =
+        drug.therapeuticClass;
+
+
+    const brandCountValue =
+        countBrands(drug);
+
+
+    drugTags.innerHTML = `
+
+        <span class="tag">
+            ${drug.therapeuticClass}
         </span>
+
+        <span class="tag">
+            ${drug.formulations.length}
+            formulations
+        </span>
+
+        <span class="tag">
+            ${brandCountValue}
+            brands
+        </span>
+
     `;
 
 
-    /*
-     * Open the monograph when the card is clicked.
-     */
-    card.addEventListener(
-        "click",
-        () => openDrug(drug)
+    renderFormulationSelector(
+        drug
     );
 
 
-    /*
-     * Keyboard accessibility.
-     */
-    card.addEventListener(
-        "keydown",
-        (event) => {
+    if (
+        drug.formulations.length
+    ) {
 
-            if (
-                event.key === "Enter" ||
-                event.key === " "
-            ) {
+        selectFormulation(
+            drug.formulations[0]
+        );
 
-                event.preventDefault();
+    }
 
-                openDrug(drug);
-            }
+}
+
+
+/* =========================================================
+   FORMULATION SELECTOR
+========================================================= */
+
+function renderFormulationSelector(
+    drug
+) {
+
+    const existing =
+        document.getElementById(
+            "formulationSelector"
+        );
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const container =
+        document.createElement(
+            "div"
+        );
+
+    container.id =
+        "formulationSelector";
+
+
+    container.style.cssText = `
+        margin-top:18px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+    `;
+
+
+    drug.formulations.forEach(
+        formulation => {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.type =
+                "button";
+
+
+            button.textContent =
+                `${formulation.strength} ${formulation.dosageForm}`;
+
+
+            button.style.cssText = `
+                border:1px solid #dce3e8;
+                background:#ffffff;
+                color:#173f5f;
+                border-radius:8px;
+                padding:8px 11px;
+                cursor:pointer;
+                font-size:12px;
+                transition:all .18s ease;
+            `;
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    selectFormulation(
+                        formulation
+                    );
+
+
+                    document
+                        .querySelectorAll(
+                            "#formulationSelector button"
+                        )
+                        .forEach(
+                            b =>
+                                b.classList.remove(
+                                    "active"
+                                )
+                        );
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            container.appendChild(
+                button
+            );
 
         }
     );
 
 
-    return card;
+    drugSection
+        .querySelector(
+            ".drug-header"
+        )
+        .appendChild(
+            container
+        );
+
 }
 
 
 /* =========================================================
-   13. INDICATION TAGS
-   ========================================================= */
+   SELECT FORMULATION
+========================================================= */
 
-function renderIndicationTags(indications) {
+function selectFormulation(
+    formulation
+) {
+
+    currentFormulation =
+        formulation;
+
 
     /*
-     * Remove duplicates while preserving order.
-     */
-    const uniqueIndications = [
-        ...new Set(
-            indications
-                .filter(Boolean)
-                .map(
-                    (item) => String(item).trim()
+       Remove old dynamic sections
+       before rendering the newly
+       selected formulation.
+    */
+
+    document
+        .getElementById("pharmacyComparison")
+        ?.remove();
+
+
+    document
+        .getElementById("treatmentCost")
+        ?.remove();
+
+
+    document
+        .getElementById("dataFreshness")
+        ?.remove();
+
+
+    /*
+       Render the new formulation
+       data.
+    */
+
+    renderPriceSummary(
+        formulation
+    );
+
+
+    renderPharmacyComparison(
+        formulation
+    );
+
+
+    renderBrands(
+        formulation
+    );
+
+
+    renderTreatmentCost(
+        formulation
+    );
+
+
+    renderFreshness(
+        formulation
+    );
+
+}
+
+
+/* =========================================================
+   GET LISTINGS
+========================================================= */
+
+function getListings(
+    formulation
+) {
+
+    return DrugDatabase
+        .getPriceListings(
+            formulation
+        );
+
+}
+
+
+/* =========================================================
+   PRICE SUMMARY
+========================================================= */
+
+function renderPriceSummary(
+    formulation
+) {
+
+    const listings =
+        getListings(
+            formulation
+        );
+
+
+    if (!listings.length) {
+
+        summaryGrid.innerHTML =
+            "";
+
+        return;
+    }
+
+
+    const prices =
+        listings.map(
+            item =>
+                item.pricePerUnit
+        );
+
+
+    const sorted =
+        [...prices].sort(
+            (a,b) =>
+                a - b
+        );
+
+
+    const lowest =
+        sorted[0];
+
+
+    const highest =
+        sorted[
+            sorted.length - 1
+        ];
+
+
+    const median =
+        calculateMedian(
+            sorted
+        );
+
+
+    const difference =
+        highest > lowest
+            ? (
+                (
+                    highest -
+                    lowest
                 )
-        )
-    ];
+                /
+                lowest
+            ) * 100
+            : 0;
+
+
+    const lowestListing =
+        listings.find(
+            item =>
+                item.pricePerUnit ===
+                lowest
+        );
+
+
+    summaryGrid.innerHTML = `
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Lowest price / unit
+            </div>
+
+            <div class="summary-value">
+                ₹${lowest.toFixed(2)}
+            </div>
+
+            <div class="summary-unit">
+                ${lowestListing.source}
+            </div>
+
+            <div class="price-difference">
+                Lowest observed
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Median price / unit
+            </div>
+
+            <div class="summary-value">
+                ₹${median.toFixed(2)}
+            </div>
+
+            <div class="summary-unit">
+                Across all listings
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="summary-label">
+                Highest price / unit
+            </div>
+
+            <div class="summary-value">
+                ₹${highest.toFixed(2)}
+            </div>
+
+            <div class="summary-unit">
+                Across all listings
+            </div>
+
+            ${
+                difference > 0
+                ? `
+                    <div class="price-difference">
+                        ${difference.toFixed(0)}%
+                        price spread
+                    </div>
+                  `
+                : ""
+            }
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   PHARMACY COMPARISON
+========================================================= */
+
+function renderPharmacyComparison(
+    formulation
+) {
+
+    const listings =
+        getListings(
+            formulation
+        );
+
+
+    const existing =
+        document.getElementById(
+            "pharmacyComparison"
+        );
+
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    if (!listings.length) {
+        return;
+    }
+
+
+    const grouped = {};
+
+
+    listings.forEach(
+        listing => {
+
+            if (
+                !grouped[
+                    listing.source
+                ]
+            ) {
+
+                grouped[
+                    listing.source
+                ] = [];
+
+            }
+
+
+            grouped[
+                listing.source
+            ].push(
+                listing
+            );
+
+        }
+    );
+
+
+    const section =
+        document.createElement(
+            "div"
+        );
+
+
+    section.id =
+        "pharmacyComparison";
+
+
+    section.className =
+        "section-card";
+
+
+    section.innerHTML = `
+
+        <div class="section-header">
+
+            <div>
+
+                <h3 class="section-title">
+                    Pharmacy Price Comparison
+                </h3>
+
+                <div class="section-caption">
+                    Lowest available listing from each source
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pharmacy-grid">
+        </div>
+
+    `;
+
+
+    const grid =
+        section.querySelector(
+            ".pharmacy-grid"
+        );
+
+
+    Object.entries(
+        grouped
+    ).forEach(
+        (
+            [source, sourceListings]
+        ) => {
+
+            const best =
+                sourceListings.reduce(
+                    (
+                        lowest,
+                        item
+                    ) =>
+                        item.pricePerUnit <
+                        lowest.pricePerUnit
+                            ? item
+                            : lowest
+                );
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "pharmacy-card";
+
+
+            card.innerHTML = `
+
+                <div class="pharmacy-name">
+                    ${source}
+                </div>
+
+                <div class="pharmacy-price">
+                    ₹${best.pricePerUnit.toFixed(2)}
+                </div>
+
+                <div class="pharmacy-unit">
+                    per ${formulation.dosageForm.toLowerCase()}
+                </div>
+
+                <div class="pharmacy-detail">
+                    ${best.brandName}
+                </div>
+
+                <div class="pharmacy-detail">
+                    Pack of ${best.packSize}
+                </div>
+
+                <div class="pharmacy-updated">
+                    Checked ${formatDate(
+                        best.checkedAt
+                    )}
+                </div>
+
+            `;
+
+
+            grid.appendChild(
+                card
+            );
+
+        }
+    );
 
 
     /*
-     * Keep the homepage cards compact.
-     */
-    const visible =
-        uniqueIndications.slice(0, 4);
+       Insert before the main brand table.
+    */
+
+    const brandSection =
+        brandTable.closest(
+            ".section-card"
+        );
 
 
-    return visible
-        .map(
-            (indication) => `
-                <span class="drug-card-indication">
-                    ${escapeHTML(indication)}
-                </span>
-            `
+    brandSection.parentNode.insertBefore(
+        section,
+        brandSection
+    );
+
+}
+
+
+/* =========================================================
+   BRAND TABLE
+========================================================= */
+
+function renderBrands(
+    formulation
+) {
+
+    const listings =
+        getListings(
+            formulation
+        );
+
+
+    brandTable.innerHTML =
+        "";
+
+
+    listings.sort(
+        (a,b) =>
+            a.pricePerUnit -
+            b.pricePerUnit
+    );
+
+
+    const lowest =
+        listings.length
+            ? listings[0].pricePerUnit
+            : null;
+
+
+    listings.forEach(
+        listing => {
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            const isLowest =
+                listing.pricePerUnit ===
+                lowest;
+
+
+            row.innerHTML = `
+
+                <td>
+
+                    <div class="brand-name-cell">
+                        ${listing.brandName}
+                    </div>
+
+                    ${
+                        isLowest
+                        ? `
+                            <span class="lowest">
+                                Lowest
+                            </span>
+                          `
+                        : ""
+                    }
+
+                </td>
+
+
+                <td>
+
+                    <div class="manufacturer">
+                        ${listing.manufacturer}
+                    </div>
+
+                </td>
+
+
+                <td>
+                    ${listing.packSize}
+                    ${listing.packUnit}
+                </td>
+
+
+                <td>
+
+                    <span class="price">
+                        ₹${listing.mrp.toFixed(2)}
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <span class="price">
+                        ₹${listing.sellingPrice.toFixed(2)}
+                    </span>
+
+                    <div class="manufacturer">
+                        ${listing.discountPercent.toFixed(0)}% off
+                    </div>
+
+                </td>
+
+
+                <td>
+
+                    <span class="unit-price">
+                        ₹${listing.pricePerUnit.toFixed(2)}
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <span class="source-badge">
+                        ${listing.source}
+                    </span>
+
+                </td>
+
+            `;
+
+
+            brandTable.appendChild(
+                row
+            );
+
+        }
+    );
+
+
+    brandCount.textContent =
+        `${listings.length} listings`;
+
+}
+
+
+/* =========================================================
+   TREATMENT COST
+========================================================= */
+
+function renderTreatmentCost(
+    formulation
+) {
+
+    const existing =
+        document.getElementById(
+            "treatmentCost"
+        );
+
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const listings =
+        getListings(
+            formulation
+        );
+
+
+    if (!listings.length) {
+        return;
+    }
+
+
+    const lowest =
+        Math.min(
+            ...listings.map(
+                item =>
+                    item.pricePerUnit
+            )
+        );
+
+
+    const section =
+        document.createElement(
+            "div"
+        );
+
+
+    section.id =
+        "treatmentCost";
+
+    section.className =
+        "section-card";
+
+
+    section.innerHTML = `
+
+        <div class="section-header">
+
+            <div>
+
+                <h3 class="section-title">
+                    Treatment Cost Estimate
+                </h3>
+
+                <div class="section-caption">
+                    Based on the lowest observed
+                    price per unit
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cost-body">
+
+            <div class="cost-input-group">
+
+                <label>
+                    Units per day
+                </label>
+
+                <input
+                    id="dailyUnits"
+                    type="number"
+                    min="0.5"
+                    step="0.5"
+                    value="1"
+                >
+
+            </div>
+
+
+            <div class="cost-result">
+
+                <div class="cost-label">
+                    Estimated monthly medicine cost
+                </div>
+
+                <div
+                    id="monthlyCost"
+                    class="cost-value"
+                >
+                    ₹${(
+                        lowest * 30
+                    ).toFixed(0)}
+                </div>
+
+                <div class="cost-note">
+                    Approximate 30-day cost
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    const brandSection =
+        brandTable.closest(
+            ".section-card"
+        );
+
+
+    brandSection.parentNode.insertBefore(
+        section,
+        brandSection.nextSibling
+    );
+
+
+    const input =
+        section.querySelector(
+            "#dailyUnits"
+        );
+
+
+    const result =
+        section.querySelector(
+            "#monthlyCost"
+        );
+
+
+    input.addEventListener(
+        "input",
+        function () {
+
+            const units =
+                Number(
+                    this.value
+                ) || 0;
+
+
+            const monthly =
+                lowest *
+                units *
+                30;
+
+
+            result.textContent =
+                `₹${monthly.toFixed(0)}`;
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   DATA FRESHNESS
+========================================================= */
+
+function renderFreshness(
+    formulation
+) {
+
+    const existing =
+        document.getElementById(
+            "dataFreshness"
+        );
+
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const listings =
+        getListings(
+            formulation
+        );
+
+
+    if (!listings.length) {
+        return;
+    }
+
+
+    const dates =
+        listings.map(
+            item =>
+                new Date(
+                    item.checkedAt
+                )
+        );
+
+
+    const latest =
+        new Date(
+            Math.max(
+                ...dates.map(
+                    date =>
+                        date.getTime()
+                )
+            )
+        );
+
+
+    const section =
+        document.createElement(
+            "div"
+        );
+
+
+    section.id =
+        "dataFreshness";
+
+
+    section.className =
+        "freshness-bar";
+
+
+    section.innerHTML = `
+
+        <div>
+
+            <strong>
+                Price data
+            </strong>
+
+            <span>
+                Last checked
+                ${formatDate(
+                    latest.toISOString()
+                )}
+            </span>
+
+        </div>
+
+
+        <span class="refresh-status">
+            DEMO DATA
+        </span>
+
+    `;
+
+
+    summaryGrid.parentNode.insertBefore(
+        section,
+        summaryGrid.nextSibling
+    );
+
+}
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+function calculateMedian(
+    sorted
+) {
+
+    if (!sorted.length) {
+        return 0;
+    }
+
+
+    const middle =
+        Math.floor(
+            sorted.length / 2
+        );
+
+
+    if (
+        sorted.length % 2 === 0
+    ) {
+
+        return (
+            sorted[middle - 1]
+            +
+            sorted[middle]
+        ) / 2;
+
+    }
+
+
+    return sorted[middle];
+
+}
+
+
+function countBrands(
+    drug
+) {
+
+    return drug.formulations
+        .reduce(
+            (
+                total,
+                formulation
+            ) =>
+                total +
+                formulation.brands.length,
+            0
+        );
+
+}
+
+
+function formatDate(
+    dateString
+) {
+
+    const date =
+        new Date(
+            dateString
+        );
+
+
+    if (
+        Number.isNaN(
+            date.getTime()
         )
-        .join("");
-}
+    ) {
 
+        return "Unknown";
 
-/* =========================================================
-   14. OPEN DRUG MONOGRAPH
-   ========================================================= */
-
-function openDrug(drug) {
-
-    if (!drug?.id) {
-        return;
     }
 
-    window.location.href =
-        `drug.html?id=${encodeURIComponent(drug.id)}`;
-}
 
-
-/* =========================================================
-   15. SEARCH CLEAR
-   ========================================================= */
-
-function clearSearch() {
-
-    if (!drugSearch) {
-        return;
-    }
-
-    drugSearch.value = "";
-
-    currentSearch = "";
-
-    updateClearButton();
-
-    renderDrugs(allDrugs);
-
-    drugSearch.focus();
-}
-
-
-function updateClearButton() {
-
-    if (!clearSearchButton) {
-        return;
-    }
-
-    clearSearchButton.hidden =
-        !currentSearch;
+    return date.toLocaleString(
+        "en-IN",
+        {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        }
+    );
 
 }
 
 
 /* =========================================================
-   16. COUNT
-   ========================================================= */
-
-function updateDrugCount(count) {
-
-    if (!drugCount) {
-        return;
-    }
-
-    const label =
-        count === 1
-            ? "1 medication"
-            : `${count} medications`;
-
-    drugCount.textContent = label;
-}
-
-
-/* =========================================================
-   17. LOADING / ERROR STATES
-   ========================================================= */
-
-function showLoading() {
-
-    if (drugLoading) {
-        drugLoading.hidden = false;
-    }
-
-    if (drugError) {
-        drugError.hidden = true;
-    }
-
-    if (drugEmpty) {
-        drugEmpty.hidden = true;
-    }
-}
-
-
-function hideLoading() {
-
-    if (drugLoading) {
-        drugLoading.hidden = true;
-    }
-}
-
+   DATABASE ERROR
+========================================================= */
 
 function showDatabaseError() {
 
-    hideLoading();
+    autocomplete.innerHTML = `
 
-    if (drugError) {
-        drugError.hidden = false;
-    }
+        <div class="suggestion">
 
-    if (drugEmpty) {
-        drugEmpty.hidden = true;
-    }
+            <div>
 
-    if (drugGrid) {
-        drugGrid.innerHTML = "";
-    }
+                <div class="suggestion-name">
+                    Database unavailable
+                </div>
 
-    if (drugCount) {
-        drugCount.textContent =
-            "Database unavailable";
-    }
-}
+                <div class="suggestion-meta">
+                    Check that Live Server
+                    is running.
+                </div>
 
+            </div>
 
-function hideDatabaseError() {
+        </div>
 
-    if (drugError) {
-        drugError.hidden = true;
-    }
+    `;
+
+    autocomplete.classList.add(
+        "active"
+    );
+
 }
 
 
 /* =========================================================
-   18. HTML ESCAPING
-   ========================================================= */
+   CLOSE SEARCH
+========================================================= */
 
-function escapeHTML(value) {
+document.addEventListener(
+    "click",
+    function(event) {
 
-    if (value === null || value === undefined) {
-        return "";
+        if (
+            !event.target.closest(
+                ".search-wrapper"
+            )
+        ) {
+
+            autocomplete.classList.remove(
+                "active"
+            );
+
+        }
+
     }
+);
 
-    return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-}
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+searchInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            autocomplete.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   START
+========================================================= */
+
+initializeApp();
