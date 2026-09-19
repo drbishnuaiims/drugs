@@ -1,0 +1,9 @@
+{
+  "name": "thomson-clinic-drug-price",
+  "version": "1.0.0",
+  "description": "Thomson Clinic Drug Price Intelligence Engine",
+  "type": "module",
+  "scripts": {
+    "refresh-prices": "node scripts/refresh-prices.js"
+  }
+}
